@@ -21,47 +21,53 @@ LoginStudent::~LoginStudent()
 
 void LoginStudent::on_pushButton_clicked()
 {
-    QSqlDatabase dblogin = QSqlDatabase::addDatabase("QMYSQL","mip");
-        dblogin.setHostName("localhost");  // host
-        dblogin.setDatabaseName("proiect_poo");
-        dblogin.setUserName("root");
-        dblogin.setPassword("bomboane");
 
-        QString username = ui->lineEdit_username->text();
-        QString password = ui->lineEdit_password->text();
 
-        bool ok = dblogin.open();
+    hide();
+    menustudent = new MenuStudent(this);
+    menustudent->show();
 
-        if (!ok)
-            qDebug() << "Eroare la baza de date!";
+//    QSqlDatabase dblogin = QSqlDatabase::addDatabase("QMYSQL","mip");
+//        dblogin.setHostName("localhost");  // host
+//        dblogin.setDatabaseName("proiect_poo");
+//        dblogin.setUserName("root");
+//        dblogin.setPassword("bomboane");
 
-        QSqlQuery query( QSqlDatabase::database( "mip" ) );
+//        QString username = ui->lineEdit_username->text();
+//        QString password = ui->lineEdit_password->text();
 
-        query.exec("SELECT Username, Password FROM loginstudent");
+//        bool ok = dblogin.open();
 
-        int k=0;
-        while (query.next())
-        {
-            QString name = query.value(0).toString();
-            QString pass = query.value(1).toString();
-            //int salary = query.value(1).toInt();   in caz ca vreau si verification code
+//        if (!ok)
+//            qDebug() << "Eroare la baza de date!";
 
-            if (username == name && password == pass)
-            {
-                k++;
-                hide();
-                menustudent = new MenuStudent(this);
-                menustudent->show();
-            }
-        }
-        if (k == 0)
-        {
-            QMessageBox::warning(this,"Autentificare","Date de autentificare incorecte!");
-        }
+//        QSqlQuery query( QSqlDatabase::database( "mip" ) );
 
-        dblogin.close();
-        QSqlDatabase::removeDatabase("proiect_poo");
+//        query.exec("SELECT Username, Password FROM loginstudent");
 
-        ui->lineEdit_username->clear();
-        ui->lineEdit_password->clear();
+//        int k=0;
+//        while (query.next())
+//        {
+//            QString name = query.value(0).toString();
+//            QString pass = query.value(1).toString();
+//            //int salary = query.value(1).toInt();   in caz ca vreau si verification code
+
+//            if (username == name && password == pass)
+//            {
+//                k++;
+//                hide();
+//                menustudent = new MenuStudent(this);
+//                menustudent->show();
+//            }
+//        }
+//        if (k == 0)
+//        {
+//            QMessageBox::warning(this,"Autentificare","Date de autentificare incorecte!");
+//        }
+
+//        dblogin.close();
+//        QSqlDatabase::removeDatabase("proiect_poo");
+
+//        ui->lineEdit_username->clear();
+//        ui->lineEdit_password->clear();
 }
