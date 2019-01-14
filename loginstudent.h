@@ -1,22 +1,28 @@
 #ifndef LOGINSTUDENT_H
 #define LOGINSTUDENT_H
 
-#include <QWidget>
+#include <QDialog>
+
+#include "menustudent.h"
 
 namespace Ui {
-class LogInStudent;
+class LoginStudent;
 }
 
-class LogInStudent : public QWidget
+class LoginStudent : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit LogInStudent(QWidget *parent = nullptr);
-    ~LogInStudent();
+    explicit LoginStudent(QWidget *parent = nullptr);
+    ~LoginStudent();
+
+private slots:
+    void on_pushButton_clicked();
 
 private:
-    Ui::LogInStudent *ui;
+    Ui::LoginStudent *ui;
+    MenuStudent * menustudent;
 };
 
 #endif // LOGINSTUDENT_H

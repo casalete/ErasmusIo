@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -29,19 +30,31 @@ SOURCES += \
         mainwindow.cpp \
     coursedialog.cpp \
     widget.cpp \
-    loginstudent.cpp
+    loginstudent.cpp \
+    loginteacher.cpp \
+    menustudent.cpp \
+    menuteacher.cpp \
+    newuser.cpp
 
 HEADERS += \
         mainwindow.h \
     coursedialog.h \
     widget.h \
-    loginstudent.h
+    loginstudent.h \
+    loginteacher.h \
+    menustudent.h \
+    menuteacher.h \
+    newuser.h
 
 FORMS += \
         mainwindow.ui \
     coursedialog.ui \
     widget.ui \
-    loginstudent.ui
+    loginstudent.ui \
+    loginteacher.ui \
+    menustudent.ui \
+    menuteacher.ui \
+    newuser.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

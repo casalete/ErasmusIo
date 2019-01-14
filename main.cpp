@@ -9,10 +9,5 @@ int main(int argc, char *argv[])
     MainWindow mainWindow;
        mainWindow.show();
 
-    Widget widget;
-    widget.show();
-
-    LogInStudent logInStudent;
-    logInStudent.show();
     return a.exec();
 }

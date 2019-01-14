@@ -12,3 +12,24 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    hide();
+    newuser = new NewUser();
+    newuser->show();
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    hide();
+    loginstudent = new LoginStudent();
+    loginstudent->show();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    hide();
+    loginteacher = new LoginTeacher();
+    loginteacher->show();
+}
