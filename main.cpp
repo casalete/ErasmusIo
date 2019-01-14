@@ -15,5 +15,7 @@ int main(int argc, char *argv[])
     LogInStudent logInStudent;
     logInStudent.show();
 
+    LogInStudent n;
+    n.show();
     return a.exec();
 }
