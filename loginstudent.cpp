@@ -19,7 +19,7 @@ LoginStudent::~LoginStudent()
     delete ui;
 }
 
-void LoginStudent::on_pushButton_clicked()
+void LoginStudent::on_loginButton_clicked()
 {
 
 

@@ -26,7 +26,7 @@
     <string>STUDENT</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="coursesButton">
    <property name="geometry">
     <rect>
      <x>220</x>
@@ -39,7 +39,7 @@
     <string>Choose courses</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="submitButton">
    <property name="geometry">
     <rect>
      <x>150</x>
@@ -52,7 +52,7 @@
     <string>Submit</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -72,7 +72,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit"/>
+       <widget class="QLineEdit" name="lineEdit_firstName"/>
       </item>
      </layout>
     </item>
@@ -86,7 +86,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_2"/>
+       <widget class="QLineEdit" name="lineEdit_lastName"/>
       </item>
      </layout>
     </item>
@@ -100,7 +100,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_3"/>
+       <widget class="QLineEdit" name="lineEdit_email"/>
       </item>
      </layout>
     </item>
@@ -114,7 +114,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_4"/>
+       <widget class="QLineEdit" name="lineEdit_password"/>
       </item>
      </layout>
     </item>
@@ -128,7 +128,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_5"/>
+       <widget class="QLineEdit" name="lineEdit_university"/>
       </item>
      </layout>
     </item>
@@ -142,7 +142,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_6"/>
+       <widget class="QLineEdit" name="lineEdit_duration"/>
       </item>
      </layout>
     </item>
@@ -156,7 +156,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_7"/>
+       <widget class="QLineEdit" name="lineEdit_period"/>
       </item>
      </layout>
     </item>
@@ -170,13 +170,13 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="lineEdit_8"/>
+       <widget class="QLineEdit" name="lineEdit_form"/>
       </item>
      </layout>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>110</x>

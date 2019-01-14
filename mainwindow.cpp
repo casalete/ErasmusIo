@@ -13,21 +13,21 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_newUserButton_clicked()
 {
     hide();
     newuser = new NewUser();
     newuser->show();
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_studentButton_clicked()
 {
     hide();
     loginstudent = new LoginStudent();
     loginstudent->show();
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_teacherButton_clicked()
 {
     hide();
     loginteacher = new LoginTeacher();

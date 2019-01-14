@@ -13,7 +13,7 @@ MenuTeacher::~MenuTeacher()
     delete ui;
 }
 
-void MenuTeacher::on_pushButton_clicked()
+void MenuTeacher::on_coursesButton_clicked()
 {
     hide();
     widget = new Widget();

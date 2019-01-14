@@ -18,7 +18,7 @@ public:
     ~MenuStudent();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_coursesButton_clicked();
 
 private:
     Ui::MenuStudent *ui;

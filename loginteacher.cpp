@@ -13,7 +13,7 @@ LoginTeacher::~LoginTeacher()
     delete ui;
 }
 
-void LoginTeacher::on_pushButton_clicked()
+void LoginTeacher::on_loginButton_clicked()
 {
     hide();
     menuteacher = new MenuTeacher();
