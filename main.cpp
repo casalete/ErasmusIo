@@ -1,13 +1,18 @@
-#include "mainwindow.h"
 #include <QApplication>
+#include "widget.h"
 #include "loginstudent.h"
+#include "mainwindow.h"
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
+    a.setStyle("fusion");
+    MainWindow mainWindow;
+       mainWindow.show();
 
-    LogInStudent n;
-    n.show();
+    Widget widget;
+    widget.show();
+
+    LogInStudent logInStudent;
+    logInStudent.show();
     return a.exec();
 }

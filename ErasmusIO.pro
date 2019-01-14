@@ -27,14 +27,20 @@ CONFIG += c++11
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
+    coursedialog.cpp \
+    widget.cpp \
     loginstudent.cpp
 
 HEADERS += \
         mainwindow.h \
+    coursedialog.h \
+    widget.h \
     loginstudent.h
 
 FORMS += \
         mainwindow.ui \
+    coursedialog.ui \
+    widget.ui \
     loginstudent.ui
 
 # Default rules for deployment.
