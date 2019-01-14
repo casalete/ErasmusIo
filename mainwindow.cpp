@@ -12,8 +12,3 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
-
-void MainWindow::on_addCourse_clicked()
-{
-
-}

@@ -28,17 +28,20 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     coursedialog.cpp \
-    widget.cpp
+    widget.cpp \
+    loginstudent.cpp
 
 HEADERS += \
         mainwindow.h \
     coursedialog.h \
-    widget.h
+    widget.h \
+    loginstudent.h
 
 FORMS += \
         mainwindow.ui \
     coursedialog.ui \
-    widget.ui
+    widget.ui \
+    loginstudent.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
