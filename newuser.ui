@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>120</x>
@@ -38,14 +38,14 @@
      </widget>
     </item>
     <item>
-     <widget class="QCheckBox" name="checkBox">
+     <widget class="QCheckBox" name="checkBox_teacher">
       <property name="text">
        <string>Teacher</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QCheckBox" name="checkBox_2">
+     <widget class="QCheckBox" name="checkBox_student">
       <property name="text">
        <string>Student</string>
       </property>
@@ -59,7 +59,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_3"/>
+     <widget class="QLineEdit" name="lineEdit_firstName"/>
     </item>
     <item>
      <widget class="QLabel" name="label_4">
@@ -69,7 +69,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit"/>
+     <widget class="QLineEdit" name="lineEdit_lastName"/>
     </item>
     <item>
      <widget class="QLabel" name="label_5">
@@ -79,7 +79,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_4"/>
+     <widget class="QLineEdit" name="lineEdit_email"/>
     </item>
     <item>
      <widget class="QLabel" name="label_6">
@@ -89,10 +89,10 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_2"/>
+     <widget class="QLineEdit" name="lineEdit_password"/>
     </item>
     <item>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="submitButton">
       <property name="text">
        <string>Submit</string>
       </property>

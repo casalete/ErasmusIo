@@ -13,7 +13,7 @@ MenuStudent::~MenuStudent()
     delete ui;
 }
 
-void MenuStudent::on_pushButton_clicked()
+void MenuStudent::on_coursesButton_clicked()
 {
     hide();
     widget = new Widget();
