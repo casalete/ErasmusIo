@@ -15,6 +15,9 @@ public:
     explicit NewUser(QWidget *parent = nullptr);
     ~NewUser();
 
+private slots:
+    void on_submitButton_clicked();
+
 private:
     Ui::NewUser *ui;
 };

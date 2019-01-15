@@ -123,7 +123,7 @@
       <item>
        <widget class="QLabel" name="label_8">
         <property name="text">
-         <string>University</string>
+         <string>University:</string>
         </property>
        </widget>
       </item>
@@ -208,6 +208,19 @@
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QLabel" name="label_11">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>160</y>
+     <width>59</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
   </widget>
  </widget>
  <resources/>

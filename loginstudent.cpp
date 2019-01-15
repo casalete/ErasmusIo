@@ -22,52 +22,46 @@ LoginStudent::~LoginStudent()
 void LoginStudent::on_loginButton_clicked()
 {
 
+    QSqlDatabase dblogin = QSqlDatabase::addDatabase("QMYSQL","mip");
+        dblogin.setHostName("localhost");  // host
+        dblogin.setDatabaseName("proiect_poo");
+        dblogin.setUserName("root");
+        dblogin.setPassword("bomboane");
 
-    hide();
-    menustudent = new MenuStudent(this);
-    menustudent->show();
+        QString username = ui->lineEdit_username->text();
+        QString password = ui->lineEdit_password->text();
 
-//    QSqlDatabase dblogin = QSqlDatabase::addDatabase("QMYSQL","mip");
-//        dblogin.setHostName("localhost");  // host
-//        dblogin.setDatabaseName("proiect_poo");
-//        dblogin.setUserName("root");
-//        dblogin.setPassword("bomboane");
+        bool ok = dblogin.open();
 
-//        QString username = ui->lineEdit_username->text();
-//        QString password = ui->lineEdit_password->text();
+        if (!ok)
+            qDebug() << "Eroare la baza de date!";
 
-//        bool ok = dblogin.open();
+        QSqlQuery query( QSqlDatabase::database( "mip" ) );
 
-//        if (!ok)
-//            qDebug() << "Eroare la baza de date!";
+        query.exec("SELECT Username, Password FROM loginstudent");
 
-//        QSqlQuery query( QSqlDatabase::database( "mip" ) );
+        int k=0;
+        while (query.next())
+        {
+            QString name = query.value(0).toString();
+            QString pass = query.value(1).toString();
 
-//        query.exec("SELECT Username, Password FROM loginstudent");
+            if (username == name && password == pass)
+            {
+                k++;
+                hide();
+                menustudent = new MenuStudent(this);
+                menustudent->show();
+            }
+        }
+        if (k == 0)
+        {
+            QMessageBox::warning(this,"Autentificare","Date de autentificare incorecte!");
+        }
 
-//        int k=0;
-//        while (query.next())
-//        {
-//            QString name = query.value(0).toString();
-//            QString pass = query.value(1).toString();
-//            //int salary = query.value(1).toInt();   in caz ca vreau si verification code
+        dblogin.close();
+        QSqlDatabase::removeDatabase("proiect_poo");
 
-//            if (username == name && password == pass)
-//            {
-//                k++;
-//                hide();
-//                menustudent = new MenuStudent(this);
-//                menustudent->show();
-//            }
-//        }
-//        if (k == 0)
-//        {
-//            QMessageBox::warning(this,"Autentificare","Date de autentificare incorecte!");
-//        }
-
-//        dblogin.close();
-//        QSqlDatabase::removeDatabase("proiect_poo");
-
-//        ui->lineEdit_username->clear();
-//        ui->lineEdit_password->clear();
+        ui->lineEdit_username->clear();
+        ui->lineEdit_password->clear();
 }
