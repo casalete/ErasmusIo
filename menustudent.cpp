@@ -15,20 +15,21 @@ MenuStudent::MenuStudent(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QSqlDatabase dblogin = QSqlDatabase::addDatabase("QMYSQL","mip");
+    QSqlDatabase dblogin = QSqlDatabase::addDatabase("QPSQL","erasmusio");
         dblogin.setHostName("localhost");  // host
-        dblogin.setDatabaseName("proiect_poo");
-        dblogin.setUserName("root");
-        dblogin.setPassword("bomboane");
+        dblogin.setDatabaseName("erasmusio");
+        dblogin.setUserName("erasmusio");
+        dblogin.setPassword("erasmusio");
 
         bool ok = dblogin.open();
 
         if (!ok)
             qDebug() << "Eroare la baza de date!";
 
-        QSqlQuery query( QSqlDatabase::database( "mip" ) );
+        QSqlQuery query( QSqlDatabase::database( "erasmusio" ) );
 
-        query.exec("SELECT FirstName, LastName, Email, Password FROM newuser");
+        query.exec("SELECT first_name, last_name, email, password FROM users"
+                   "WHERE email = email");
 
         while (query.next())
         {
@@ -38,7 +39,7 @@ MenuStudent::MenuStudent(QWidget *parent) :
             QString password = query.value(3).toString();
         }
 
-        ui->label_11->setText(firstname);
+        //ui->label_11->setText(firstname);
         //ui->lineEdit_lastName->setText(lastname);
         //ui->lineEdit_email->setText(email);
         //ui->lineEdit_password->setText(password);

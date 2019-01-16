@@ -21,30 +21,36 @@ NewUser::~NewUser()
 
 void NewUser::on_submitButton_clicked()
 {
-    QSqlDatabase dblogin = QSqlDatabase::addDatabase("QMYSQL","mip");
-        dblogin.setHostName("localhost");  // host
-        dblogin.setDatabaseName("proiect_poo");
-        dblogin.setUserName("root");
-        dblogin.setPassword("bomboane");
+    QSqlDatabase db_register = QSqlDatabase::addDatabase("QPSQL","erasmusio");
+        db_register.setHostName("localhost");  // host
+        db_register.setDatabaseName("erasmusio");
+        db_register.setUserName("erasmusio");
+        db_register.setPassword("erasmusio");
 
-        bool ok = dblogin.open();
+        bool ok = db_register.open();
 
         if (!ok)
             qDebug() << "Eroare la baza de date!";
 
-    QString firstname = ui->lineEdit_firstName->text();
+        QString firstname = ui->lineEdit_firstName->text();
         QString lastname = ui->lineEdit_lastName->text();
         QString email = ui->lineEdit_email->text();
         QString password = ui->lineEdit_password->text();
 
-        QSqlQuery query( QSqlDatabase::database( "mip" ) );
-        query.prepare("INSERT INTO newuser (FirstName, LastName, Email, Password) "
-                   "VALUES (?,?,?,?)");
+        QString role = "Student";  //TODO
+        int id = 0; //TODO
 
+        QSqlQuery query( QSqlDatabase::database( "erasmusio" ) );
+        query.prepare("INSERT INTO users (id, first_name, last_name, email, password, role) "
+                   "VALUES (?,?,?,?,?,?)");
+
+        query.addBindValue(id);
         query.addBindValue(firstname);
         query.addBindValue(lastname);
         query.addBindValue(email);
         query.addBindValue(password);
+        query.addBindValue(role);
+
 
         query.exec();
 
@@ -54,6 +60,6 @@ void NewUser::on_submitButton_clicked()
         ui->lineEdit_email->clear();
         ui->lineEdit_password->clear();
 
-        dblogin.close();
-        QSqlDatabase::removeDatabase("proiect_poo");
+        db_register.close();
+        QSqlDatabase::removeDatabase("erasmusio");
 }

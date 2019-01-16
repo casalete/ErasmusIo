@@ -22,11 +22,11 @@ LoginStudent::~LoginStudent()
 void LoginStudent::on_loginButton_clicked()
 {
 
-    QSqlDatabase dblogin = QSqlDatabase::addDatabase("QMYSQL","mip");
+    QSqlDatabase dblogin = QSqlDatabase::addDatabase("QPSQL","erasmusio");
         dblogin.setHostName("localhost");  // host
-        dblogin.setDatabaseName("proiect_poo");
-        dblogin.setUserName("root");
-        dblogin.setPassword("bomboane");
+        dblogin.setDatabaseName("erasmusio");
+        dblogin.setUserName("erasmusio");
+        dblogin.setPassword("erasmusio");
 
         QString username = ui->lineEdit_username->text();
         QString password = ui->lineEdit_password->text();
@@ -36,9 +36,9 @@ void LoginStudent::on_loginButton_clicked()
         if (!ok)
             qDebug() << "Eroare la baza de date!";
 
-        QSqlQuery query( QSqlDatabase::database( "mip" ) );
+        QSqlQuery query( QSqlDatabase::database( "erasmusio" ) );
 
-        query.exec("SELECT Username, Password FROM loginstudent");
+        query.exec("SELECT email, password FROM users");
 
         int k=0;
         while (query.next())
@@ -60,7 +60,7 @@ void LoginStudent::on_loginButton_clicked()
         }
 
         dblogin.close();
-        QSqlDatabase::removeDatabase("proiect_poo");
+        QSqlDatabase::removeDatabase("erasmusio");
 
         ui->lineEdit_username->clear();
         ui->lineEdit_password->clear();
