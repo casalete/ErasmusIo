@@ -6,6 +6,10 @@ CourseDialog::CourseDialog(QWidget *parent) :
     ui(new Ui::CourseDialog)
 {
     ui->setupUi(this);
+
+    ui->comboBox_optionality->addItem("MANDATORY");
+    ui->comboBox_optionality->addItem("OPTIONAL");
+
 }
 
 CourseDialog::~CourseDialog()
@@ -33,4 +37,12 @@ QString CourseDialog::teacher() const{
 
 int CourseDialog::nrH() const{
     return ui->nrH->value();
+}
+
+int CourseDialog::nrCP() const{
+    return ui->nrCP->value();
+}
+
+QString CourseDialog::optionality() const{
+    return ui->comboBox_optionality->currentData();
 }

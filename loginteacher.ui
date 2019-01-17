@@ -16,53 +16,21 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>40</y>
-     <width>59</width>
+     <x>60</x>
+     <y>30</y>
+     <width>141</width>
      <height>16</height>
     </rect>
    </property>
    <property name="text">
-    <string>LOG IN</string>
+    <string>LOG IN TO ERASMUSio</string>
    </property>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>80</y>
-     <width>127</width>
-     <height>102</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>Username:</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_usernamet"/>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>Password:</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLineEdit" name="lineEdit_passwordt"/>
-    </item>
-   </layout>
   </widget>
   <widget class="QPushButton" name="loginButton">
    <property name="geometry">
     <rect>
-     <x>130</x>
-     <y>210</y>
+     <x>70</x>
+     <y>150</y>
      <width>114</width>
      <height>32</height>
     </rect>
@@ -74,14 +42,60 @@
   <widget class="QPushButton" name="newTeacherButton">
    <property name="geometry">
     <rect>
-     <x>140</x>
-     <y>20</y>
-     <width>75</width>
+     <x>60</x>
+     <y>220</y>
+     <width>171</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
     <string>I Don't have an account</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_usernamet">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>70</y>
+     <width>108</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>70</y>
+     <width>62</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Email:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_passwordt">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>110</y>
+     <width>108</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>110</y>
+     <width>58</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Password:</string>
    </property>
   </widget>
  </widget>
