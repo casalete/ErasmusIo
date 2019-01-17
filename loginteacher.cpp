@@ -6,6 +6,8 @@
 #include "QSqlDatabase"
 #include <QDebug>
 #include <QSqlQuery>
+#include "mainwindow.h"
+
 
 LoginTeacher::LoginTeacher(QWidget *parent) :
     QDialog(parent),

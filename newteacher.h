@@ -15,6 +15,9 @@ public:
     explicit NewTeacher(QWidget *parent = nullptr);
     ~NewTeacher();
 
+private slots:
+    void on_submitButton_clicked();
+
 private:
     Ui::NewTeacher *ui;
 };
