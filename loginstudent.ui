@@ -45,7 +45,7 @@
      <x>130</x>
      <y>90</y>
      <width>127</width>
-     <height>102</height>
+     <height>104</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -67,7 +67,11 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_password"/>
+     <widget class="QLineEdit" name="lineEdit_password">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
