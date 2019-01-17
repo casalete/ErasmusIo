@@ -101,7 +101,42 @@ MenuStudent::MenuStudent(QWidget *parent) :
 //        ui->lineEdit_lastName->clear();
 //        ui->lineEdit_email->clear();
 //        ui->lineEdit_password->clear();
+
+
+
+
+    QSqlDatabase db_menustudent;
+    db_menustudent = QSqlDatabase::addDatabase("QPSQL","menustudent");
+    db_menustudent.setHostName("localhost");  // host
+    db_menustudent.setDatabaseName("erasmusio");
+    db_menustudent.setUserName("erasmusio");
+    db_menustudent.setPassword("erasmusio");
+    db_menustudent.open();
+    QSqlQuery query(db_menustudent);
+
+    query.prepare("SELECT first_name, last_name, email, password FROM student");
+
+        query.exec();
+
+        while(query.next()){
+               QString  firstname = query.value(0).toString();
+               QString lastname = query.value(1).toString();
+               QString email = query.value(2).toString();
+               QString password = query.value(3).toString();
+           }
+
+
+
+//    if(!dblogin.open()){
+//        qDebug()<<("Failed to open database");
+//        return false;
+//    }
+//    else{
+//        qDebug()<<("Connection to database succesfull");
+//        return true;
 }
+
+
 
 MenuStudent::~MenuStudent()
 {
