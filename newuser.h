@@ -18,6 +18,8 @@ public:
 private slots:
     void on_submitButton_clicked();
 
+    void on_studentRadioButton_clicked();
+
 private:
     Ui::NewUser *ui;
 };

@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+    openConnection();
 }
 
 void MainWindow::on_newUserButton_clicked()

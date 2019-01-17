@@ -38,16 +38,16 @@
      </widget>
     </item>
     <item>
-     <widget class="QCheckBox" name="checkBox_teacher">
+     <widget class="QRadioButton" name="studentRadioButton">
       <property name="text">
-       <string>Teacher</string>
+       <string>STUDENT</string>
       </property>
      </widget>
     </item>
     <item>
-     <widget class="QCheckBox" name="checkBox_student">
+     <widget class="QRadioButton" name="teacherRadioButton">
       <property name="text">
-       <string>Student</string>
+       <string>TEACHER</string>
       </property>
      </widget>
     </item>

@@ -2,7 +2,6 @@
 #define MENUSTUDENT_H
 
 #include <QDialog>
-
 #include "widget.h"
 
 namespace Ui {

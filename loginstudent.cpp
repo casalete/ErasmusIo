@@ -6,12 +6,16 @@
 #include "QSqlDatabase"
 #include <QDebug>
 #include <QSqlQuery>
+#include "mainwindow.h"
 
 LoginStudent::LoginStudent(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::LoginStudent)
 {
     ui->setupUi(this);
+    //openConnection();
+//    if (!openConnection())
+//        qDebug() << "Eroare la baza de date!";
 }
 
 LoginStudent::~LoginStudent()
@@ -21,47 +25,38 @@ LoginStudent::~LoginStudent()
 
 void LoginStudent::on_loginButton_clicked()
 {
-
-    QSqlDatabase dblogin = QSqlDatabase::addDatabase("QPSQL","erasmusio");
-        dblogin.setHostName("localhost");  // host
-        dblogin.setDatabaseName("erasmusio");
-        dblogin.setUserName("erasmusio");
-        dblogin.setPassword("erasmusio");
-
-        QString username = ui->lineEdit_username->text();
+        QString email = ui->lineEdit_username->text();
         QString password = ui->lineEdit_password->text();
-
-        bool ok = dblogin.open();
-
-        if (!ok)
-            qDebug() << "Eroare la baza de date!";
-
-        QSqlQuery query( QSqlDatabase::database( "erasmusio" ) );
-
-        query.exec("SELECT email, password FROM users");
-
+        MainWindow m;
+        m.openConnection();
+        QSqlDatabase db = QSqlDatabase::database();
+        QSqlQuery query(db);
+        //query.prepare("SELECT * from useres where email="+email+"'and password ='"+password);
+        query.prepare("SELECT email, password FROM users");
+        query.exec();
         int k=0;
         while (query.next())
         {
-            QString name = query.value(0).toString();
-            QString pass = query.value(1).toString();
 
-            if (username == name && password == pass)
-            {
-                k++;
-                hide();
-                menustudent = new MenuStudent(this);
-                menustudent->show();
-            }
+            QString emailFromDB = query.value(0).toString();
+            QString passwordFromDb = query.value(1).toString();
+
+           if (email == emailFromDB && password == passwordFromDb)
+               {
+                   k++;
+               }
         }
-        if (k == 0)
-        {
+        if(k>0){
+            //dblogin.close();
+           // closeConnection();
+            this->hide();
+            menustudent = new MenuStudent(this);
+            menustudent->show();
+        }
+        else
             QMessageBox::warning(this,"Autentificare","Date de autentificare incorecte!");
-        }
 
-        dblogin.close();
-        QSqlDatabase::removeDatabase("erasmusio");
+        //ui->lineEdit_username->clear();
+       // ui->lineEdit_password->clear();
 
-        ui->lineEdit_username->clear();
-        ui->lineEdit_password->clear();
 }
