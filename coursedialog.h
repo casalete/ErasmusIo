@@ -18,6 +18,9 @@ public:
     QString course() const;
     QString teacher() const;
     int nrH() const;
+    int nrCP() const;
+    QString optionality() const;
+
 private slots:
     void on_buttonBox_accepted();
 

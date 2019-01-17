@@ -38,3 +38,11 @@ QString CourseDialog::teacher() const{
 int CourseDialog::nrH() const{
     return ui->nrH->value();
 }
+
+int CourseDialog::nrCP() const{
+    return ui->nrCP->value();
+}
+
+QString CourseDialog::optionality() const{
+    return ui->comboBox_optionality->currentData();
+}

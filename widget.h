@@ -22,7 +22,7 @@ private:
     Ui::Widget *ui;
 
     enum Column{
-        COURSE, TEACHER, NROFHOURS
+        COURSE, TEACHER, NROFHOURS, NROFCREDITPOINTS, OPTIONALITY
     };
 };
 
