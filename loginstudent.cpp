@@ -63,10 +63,8 @@ void LoginStudent::on_loginButton_clicked()
 
 void LoginStudent::on_newStudentButton_clicked()
 {
-    //this->hide();
-    //newStudent = new NewStudent(this);
-   // newStudent->show();
-    //newStudent->show();
-   //NewStudent ns ;
-   //ns.setModal(true);
+    hide();
+    newStudent = new NewStudent();
+    newStudent->show();
+
 }

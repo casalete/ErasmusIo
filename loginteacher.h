@@ -4,6 +4,7 @@
 #include <QDialog>
 
 #include "menuteacher.h"
+#include "newteacher.h"
 
 namespace Ui {
 class LoginTeacher;
@@ -20,9 +21,12 @@ public:
 private slots:
     void on_loginButton_clicked();
 
+    void on_newTeacherButton_clicked();
+
 private:
     Ui::LoginTeacher *ui;
     MenuTeacher * menuteacher;
+    NewTeacher * newTeacher;
 };
 
 #endif // LOGINTEACHER_H

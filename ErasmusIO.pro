@@ -36,7 +36,8 @@ SOURCES += \
     menuteacher.cpp \
     newuser.cpp \
     newstudent.cpp \
-    newteacher.cpp
+    newteacher.cpp \
+    createstudent.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -48,7 +49,8 @@ HEADERS += \
     menuteacher.h \
     newuser.h \
     newstudent.h \
-    newteacher.h
+    newteacher.h \
+    createstudent.h
 
 FORMS += \
         mainwindow.ui \
@@ -60,7 +62,8 @@ FORMS += \
     menuteacher.ui \
     newuser.ui \
     newstudent.ui \
-    newteacher.ui
+    newteacher.ui \
+    createstudent.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
