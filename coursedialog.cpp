@@ -6,6 +6,10 @@ CourseDialog::CourseDialog(QWidget *parent) :
     ui(new Ui::CourseDialog)
 {
     ui->setupUi(this);
+
+    ui->comboBox_optionality->addItem("MANDATORY");
+    ui->comboBox_optionality->addItem("OPTIONAL");
+
 }
 
 CourseDialog::~CourseDialog()

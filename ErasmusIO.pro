@@ -63,7 +63,8 @@ FORMS += \
     newuser.ui \
     newstudent.ui \
     newteacher.ui \
-    createstudent.ui
+    createstudent.ui \
+    universityinfo.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
