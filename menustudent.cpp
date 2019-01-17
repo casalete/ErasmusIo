@@ -8,31 +8,41 @@
 #include "QSqlDatabase"
 #include <QDebug>
 #include <QSqlQuery>
+#include "mainwindow.h"
+#include "QString"
 
 MenuStudent::MenuStudent(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::MenuStudent)
 {
     ui->setupUi(this);
+    //LoginStudent student;
+    //int id = student.getId();
+   // char buffer [5];
+   // sprintf(buffer, "%d", id);
+//    QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL","db1");
+//    db.setHostName("localhost");  // host
+//    db.setDatabaseName("erasmusio");
+//    db.setUserName("erasmusio");
+//    db.setPassword("erasmusio");
+//    if(!db.open()){
+//        qDebug()<<("Failed to open database");
+//    }
+//    MainWindow mw;
+//    mw.openConnection();
+//    QSqlDatabase db = QSqlDatabase::database();
+//    QSqlQuery query(db);
+//   // QString queryStr = "SELECT first_name, last_name, email, password FROM users where id '" + QString(buffer) + "'";
+//    query.prepare("SELECT first_name, last_name, email, password FROM users");
 
-    QSqlDatabase db = QSqlDatabase::addDatabase("QPSQL","db1");
-    db.setHostName("localhost");  // host
-    db.setDatabaseName("erasmusio");
-    db.setUserName("erasmusio");
-    db.setPassword("erasmusio");
-    if(!db.open()){
-        qDebug()<<("Failed to open database");
-    }
-    QSqlQuery query(db);
-    query.prepare("SELECT first_name, last_name, email, password FROM users where email = ");
-    query.exec();
+//    query.exec();
 
-    while(query.next()){
-         QString firstname = query.value(0).toString();
-           QString lastname = query.value(1).toString();
-           QString email = query.value(2).toString();
-           QString password = query.value(3).toString();
-        }
+//    while(query.next()){
+//         QString firstname = query.value(0).toString();
+//           QString lastname = query.value(1).toString();
+//           QString email = query.value(2).toString();
+//           QString password = query.value(3).toString();
+//       }
 
 
 //    LoginStudent ls;

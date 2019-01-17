@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
-    openConnection();
+    //openConnection();
 }
 
 void MainWindow::on_studentButton_clicked()

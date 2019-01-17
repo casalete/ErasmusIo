@@ -51,6 +51,14 @@ public:
     explicit LoginStudent(QWidget *parent = nullptr);
     ~LoginStudent();
 
+//public:
+//    int getId(){
+//        return login_id;
+//    }
+
+//public:
+//    int login_id;
+
 private slots:
     void on_loginButton_clicked();
 

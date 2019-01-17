@@ -40,12 +40,20 @@ public:
     }
     void closeConnection(){
 
-       // QString connectionName = dblogin.connectionName();
-        dblogin.close();
-        dblogin = QSqlDatabase();
-        QSqlDatabase::removeDatabase(dblogin.connectionName());
+//       // QString connectionName = dblogin.connectionName();
+//        dblogin.close();
+//        dblogin = QSqlDatabase();
+//        QSqlDatabase::removeDatabase(dblogin.connectionName());
 
-        qDebug()<<("Connection to database closed");
+//        qDebug()<<("Connection to database closed");
+
+            {
+                QSqlDatabase db = QSqlDatabase::database();
+                db.close();
+            }
+            QSqlDatabase::removeDatabase( QSqlDatabase::defaultConnection );
+            return;
+
     }
 
 private slots:
