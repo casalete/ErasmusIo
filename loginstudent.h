@@ -6,6 +6,7 @@
 #include "QSqlDatabase"
 #include "menustudent.h"
 #include "QtDebug"
+#include "newstudent.h"
 
 namespace Ui {
 class LoginStudent;
@@ -53,9 +54,12 @@ public:
 private slots:
     void on_loginButton_clicked();
 
+    void on_newStudentButton_clicked();
+
 private:
     Ui::LoginStudent *ui;
     MenuStudent * menustudent;
+    NewStudent * newStudent;
 };
 
 #endif // LOGINSTUDENT_H

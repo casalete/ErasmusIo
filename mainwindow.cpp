@@ -14,13 +14,6 @@ MainWindow::~MainWindow()
     openConnection();
 }
 
-void MainWindow::on_newUserButton_clicked()
-{
-    hide();
-    newuser = new NewUser();
-    newuser->show();
-}
-
 void MainWindow::on_studentButton_clicked()
 {
     hide();

@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 
-#include "newuser.h"
+
 #include "loginstudent.h"
 #include "loginteacher.h"
 
@@ -49,7 +49,6 @@ public:
     }
 
 private slots:
-    void on_newUserButton_clicked();
 
     void on_studentButton_clicked();
 
@@ -57,7 +56,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    NewUser * newuser;
     LoginStudent * loginstudent;
     LoginTeacher * loginteacher;
 };
