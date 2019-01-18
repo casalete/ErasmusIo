@@ -35,6 +35,7 @@ void LoginStudent::on_loginButton_clicked()
         query.prepare("SELECT email, password, id FROM student");
         query.exec();
         int k=0;
+        int login_id = 0;
         while (query.next())
         {
 
@@ -45,7 +46,7 @@ void LoginStudent::on_loginButton_clicked()
            if (email == emailFromDB && password == passwordFromDb)
                {
                    k++;
-                   //login_id = query.value(2).toInt();
+                   login_id = query.value(2).toInt();
                }
         }
         if(k>0){
@@ -53,6 +54,7 @@ void LoginStudent::on_loginButton_clicked()
             //m.closeConnection();
             this->hide();
             menustudent = new MenuStudent(this);
+            menustudent->setStudentId(login_id);
             menustudent->show();
         }
         else

@@ -23,6 +23,14 @@ private:
     Ui::MenuStudent *ui;
     Widget * widget;
 
+
+public:
+    int student_id;
+
+public:
+    void setStudentId(int id){
+        student_id = id;
+    }
 };
 
 #endif // MENUSTUDENT_H

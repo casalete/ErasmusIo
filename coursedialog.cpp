@@ -44,5 +44,5 @@ int CourseDialog::nrCP() const{
 }
 
 QString CourseDialog::optionality() const{
-    return ui->comboBox_optionality->currentData();
+    return ui->comboBox_optionality->currentText();
 }
