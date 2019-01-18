@@ -34,7 +34,6 @@ SOURCES += \
     loginteacher.cpp \
     menustudent.cpp \
     menuteacher.cpp \
-    newuser.cpp \
     newstudent.cpp \
     newteacher.cpp \
     createstudent.cpp \
@@ -53,7 +52,6 @@ HEADERS += \
     loginteacher.h \
     menustudent.h \
     menuteacher.h \
-    newuser.h \
     newstudent.h \
     newteacher.h \
     createstudent.h \
@@ -72,7 +70,6 @@ FORMS += \
     loginteacher.ui \
     menustudent.ui \
     menuteacher.ui \
-    newuser.ui \
     newstudent.ui \
     newteacher.ui \
     universityinfo.ui \

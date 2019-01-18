@@ -29,14 +29,11 @@ CoursesWidgetStudent::CoursesWidgetStudent(QWidget *parent) :
 
 
 
-
-    qry->prepare("SELECT name, teacher_name, no_credits, optionality, no_hours_w FROM course"
-             "VALUES(?,?,?,?,?)");
-
-
+//name, teacher_name, no_credits, optionality, no_hours_w
+     qry->prepare("SELECT name, teacher_name, no_credits, optionality, no_hours_w FROM course");
      qry->exec();
      modal->setQuery(*qry);
-     ui->tableView_2->setModel(modal);
+     ui->tableView->setModel(modal);
 
 }
 
