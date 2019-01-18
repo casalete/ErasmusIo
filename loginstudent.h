@@ -59,6 +59,10 @@ public:
 //public:
 //    int login_id;
 
+signals:
+void valSignal(int);
+
+
 private slots:
     void on_loginButton_clicked();
 

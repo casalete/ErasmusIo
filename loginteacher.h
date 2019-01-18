@@ -18,10 +18,12 @@ public:
     explicit LoginTeacher(QWidget *parent = nullptr);
     ~LoginTeacher();
 
+
 private slots:
     void on_loginButton_clicked();
 
     void on_newTeacherButton_clicked();
+
 
 private:
     Ui::LoginTeacher *ui;

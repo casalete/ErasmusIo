@@ -2,12 +2,13 @@
 #define UNIVERSITYDIALOG_H
 
 #include <QWidget>
+#include <QDialog>
 
 namespace Ui {
 class UniversityDialog;
 }
 
-class UniversityDialog : public QWidget
+class UniversityDialog : public QDialog
 {
     Q_OBJECT
 

@@ -14,12 +14,12 @@ UniversityDialog::~UniversityDialog()
 }
 
 void UniversityDialog::on_buttonBox_accepted(){
-    QDialog::accept();
+    accept();
 }
 
 void UniversityDialog::on_buttonBox_rejected()
 {
-    QDialog::reject();
+    reject();
 }
 
 QString UniversityDialog::contactEmail() const{

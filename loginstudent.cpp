@@ -53,8 +53,12 @@ void LoginStudent::on_loginButton_clicked()
             //dblogin.close();
             //m.closeConnection();
             this->hide();
+
+            connect(this, SIGNAL(valSignal(int)),menustudent,SLOT(setValueFromSignal(int)));
+            emit(valSignal(login_id));
             menustudent = new MenuStudent(this);
-            menustudent->setStudentId(login_id);
+
+
             menustudent->show();
         }
         else

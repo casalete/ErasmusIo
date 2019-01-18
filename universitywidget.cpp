@@ -1,5 +1,6 @@
 #include "universitywidget.h"
 #include "ui_universitywidget.h"
+#include "universitydialog.h"
 
 UniversityWidget::UniversityWidget(QWidget *parent) :
     QWidget(parent),

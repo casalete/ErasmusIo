@@ -104,7 +104,7 @@ MenuStudent::MenuStudent(QWidget *parent) :
 
 
 
-
+    //int test = getStudentId();
     QSqlDatabase db_menustudent;
     db_menustudent = QSqlDatabase::addDatabase("QPSQL","menustudent");
     db_menustudent.setHostName("localhost");  // host
@@ -113,8 +113,10 @@ MenuStudent::MenuStudent(QWidget *parent) :
     db_menustudent.setPassword("erasmusio");
     db_menustudent.open();
     QSqlQuery query(db_menustudent);
+    //QString id_string = QString::number(student_id);
 
-    query.prepare("SELECT first_name, last_name, email, password FROM student");
+    //query.prepare("SELECT first_name, last_name, email, password FROM student where id ='" + id_string + "'");
+     query.prepare("SELECT first_name, last_name, email, password FROM student ");
 
         query.exec();
 
@@ -148,4 +150,8 @@ void MenuStudent::on_coursesButton_clicked()
     hide();
     widget = new Widget();
     widget->show();
+}
+
+void MenuStudent::setValueFromSignal(int val){
+    student_id = val;
 }
