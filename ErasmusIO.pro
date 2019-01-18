@@ -39,7 +39,7 @@ SOURCES += \
     newteacher.cpp \
     createstudent.cpp \
     universitydialog.cpp \
-    widgetuniversity.cpp
+    universitywidget.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -54,7 +54,7 @@ HEADERS += \
     newteacher.h \
     createstudent.h \
     universitydialog.h \
-    widgetuniversity.h
+    universitywidget.h
 
 FORMS += \
         mainwindow.ui \
@@ -69,8 +69,8 @@ FORMS += \
     newteacher.ui \
     createstudent.ui \
     universityinfo.ui \
-    widgetuniversity.ui \
-    universitydialog.ui
+    universitydialog.ui \
+    universitywidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

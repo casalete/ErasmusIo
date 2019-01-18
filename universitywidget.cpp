@@ -1,25 +1,24 @@
-#include "widgetuniversity.h"
-#include "ui_widgetuniversity.h"
-#include "universitydialog.h"
+#include "universitywidget.h"
+#include "ui_universitywidget.h"
 
-WidgetUniversity::WidgetUniversity(QWidget *parent) :
+UniversityWidget::UniversityWidget(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::WidgetUniversity)
+    ui(new Ui::UniversityWidget)
 {
     ui->setupUi(this);
     QStringList labels;
     setWindowTitle("Universities");
-    ui->tableWidget->setColumnCount(4);
-    labels << "NAME" << "COUNTRY" << "CONTACT PERSON NAME"<<"CONTACT PERSON EMAIL";
-    ui->tableWidget->setHorizontalHeaderLabels(labels);
+        ui->tableWidget->setColumnCount(4);
+        labels << "NAME" << "COUNTRY" << "CONTACT PERSON NAME"<<"CONTACT PERSON EMAIL";
+        ui->tableWidget->setHorizontalHeaderLabels(labels);
 }
 
-WidgetUniversity::~WidgetUniversity()
+UniversityWidget::~UniversityWidget()
 {
     delete ui;
 }
 
-void Widget::on_addUniversity_clicked()
+void UniversityWidget::on_addUniversity_clicked()
 {
     int res, counter;
     QString name, country, contactName, contactEmail ;
