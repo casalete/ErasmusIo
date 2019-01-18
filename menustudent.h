@@ -2,7 +2,7 @@
 #define MENUSTUDENT_H
 
 #include <QDialog>
-#include "widget.h"
+#include "courseswidgetstudent.h"
 
 namespace Ui {
 class MenuStudent;
@@ -23,7 +23,7 @@ private slots:
 
 private:
     Ui::MenuStudent *ui;
-    Widget * widget;
+    CoursesWidgetStudent * widget;
 
 
 private:

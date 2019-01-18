@@ -54,8 +54,8 @@ void LoginStudent::on_loginButton_clicked()
             //m.closeConnection();
             this->hide();
 
-            connect(this, SIGNAL(valSignal(int)),menustudent,SLOT(setValueFromSignal(int)));
-            emit(valSignal(login_id));
+        //    connect(this, SIGNAL(valSignal(int)),menustudent,SLOT(setValueFromSignal(int)));
+            //emit(valSignal(login_id));
             menustudent = new MenuStudent(this);
 
 
