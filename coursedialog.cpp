@@ -28,34 +28,34 @@ void CourseDialog::on_buttonBox_accepted()
 {
 
      accept();
-    //TODO - get values from ui
+//    //TODO - get values from ui
 
-    QString form_name = ui->course->text();
-    QString form_name_teacher = ui->teacher->text();
-     int form_no_hours = ui->nrH->value();
-      int form_no_credits = ui->nrCP->value();
-    QVariant form_optionality = ui->comboBox_optionality->currentText();
+//    QString form_name = ui->course->text();
+//    QString form_name_teacher = ui->teacher->text();
+//     int form_no_hours = ui->nrH->value();
+//      int form_no_credits = ui->nrCP->value();
+//    QVariant form_optionality = ui->comboBox_optionality->currentText();
 
-    MainWindow m;
-    m.openConnection();
-    QSqlDatabase db = QSqlDatabase::database();
-    QSqlQuery query(db);
-    query.prepare("INSERT INTO course (name, name_teacher, no_credits, optionality, no_hours)"
-               "VALUES (?,?,?,?,?)");
+//    MainWindow m;
+//    m.openConnection();
+//    QSqlDatabase db = QSqlDatabase::database();
+//    QSqlQuery query(db);
+//    query.prepare("INSERT INTO course (name, name_teacher, no_credits, optionality, no_hours)"
+//               "VALUES (?,?,?,?,?)");
 
-    query.addBindValue(form_name);
-    query.addBindValue(form_name_teacher);
-    query.addBindValue(form_no_hours);
-    query.addBindValue(form_no_credits);
-    query.addBindValue(form_optionality);
+//    query.addBindValue(form_name);
+//    query.addBindValue(form_name_teacher);
+//    query.addBindValue(form_no_hours);
+//    query.addBindValue(form_no_credits);
+//    query.addBindValue(form_optionality);
 
-    query.exec();
+//    query.exec();
 
-    ui->course->clear();
-    ui->teacher->clear();
-    ui->nrH->clear();
-    ui->nrCP->clear();
-    ui->comboBox_optionality->clear();
+//    ui->course->clear();
+//    ui->teacher->clear();
+//    ui->nrH->clear();
+//    ui->nrCP->clear();
+//    ui->comboBox_optionality->clear();
 
 
 
