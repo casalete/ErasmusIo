@@ -14,7 +14,12 @@ class MenuStudent : public QDialog
 
 public:
     explicit MenuStudent(QWidget *parent = nullptr);
+
     ~MenuStudent();
+//    MenuStudent(int id){
+//    student_id = id;
+//}
+
 
 
 
