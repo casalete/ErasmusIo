@@ -116,15 +116,34 @@ MenuStudent::MenuStudent(QWidget *parent) :
     //QString id_string = QString::number(student_id);
 
     //query.prepare("SELECT first_name, last_name, email, password FROM student where id ='" + id_string + "'");
-     query.prepare("SELECT first_name, last_name, email, password FROM student ");
+     query.prepare("SELECT first_name, last_name, email,country,university_name, password FROM student ");
 
         query.exec();
 
         while(query.next()){
                QString  firstname = query.value(0).toString();
+               ui->lineEdit_firstName->setText(firstname);
+
                QString lastname = query.value(1).toString();
+                ui->lineEdit_lastName->setText(lastname);
+
                QString email = query.value(2).toString();
-               QString password = query.value(3).toString();
+                ui->lineEdit_email->setText(email);
+
+               QString country = query.value(3).toString();
+               ui->lineEdit_country->setText(country);
+
+               QString duration = query.value(4).toString();
+               ui->lineEdit_duration->setText(duration);
+
+               QString semester = query.value(5).toString();
+               ui->lineEdit_period->setText(semester);
+
+               QString university_name = query.value(6).toString();
+               ui->lineEdit_university->setText(university_name);
+
+               QString password = query.value(7).toString();
+               ui->lineEdit_password->setText(password);
            }
 
 

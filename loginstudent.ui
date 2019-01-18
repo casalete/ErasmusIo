@@ -23,8 +23,8 @@
   <widget class="QPushButton" name="loginButton">
    <property name="geometry">
     <rect>
-     <x>330</x>
-     <y>20</y>
+     <x>340</x>
+     <y>30</y>
      <width>75</width>
      <height>23</height>
     </rect>
@@ -79,7 +79,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
      <x>101</x>
      <y>11</y>
      <width>207</width>
-     <height>78</height>
+     <height>85</height>
     </rect>
    </property>
    <property name="font">
