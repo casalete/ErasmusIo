@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/pinned.jpg);
+   <string notr="true">background-image: url(:/unic.jpg);
 
 
 
@@ -99,7 +99,7 @@ font: 75 10pt &quot;Courier&quot;;</string>
     <string>BACK</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>101</x>

@@ -69,7 +69,6 @@ FORMS += \
     newuser.ui \
     newstudent.ui \
     newteacher.ui \
-    createstudent.ui \
     universityinfo.ui \
     universitydialog.ui \
     universitywidget.ui \

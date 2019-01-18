@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/pinned.jpg);
+   <string notr="true">background-image: url(:/unic.jpg);
 </string>
   </property>
   <widget class="QPushButton" name="newTeacherButton">
@@ -129,13 +129,16 @@
           <bold>true</bold>
          </font>
         </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
        </widget>
       </item>
      </layout>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>300</x>
