@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>maini.jpg</file>
+        <file>pinned.jpg</file>
+        <file>cladiri.jpg</file>
+    </qresource>
+</RCC>
