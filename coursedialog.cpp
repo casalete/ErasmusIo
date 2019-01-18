@@ -68,11 +68,11 @@ void CourseDialog::on_buttonBox_rejected()
 }
 
 QString CourseDialog::course() const{
-    return ui->courseName->text();
+    return ui->course->text();
 }
 
 QString CourseDialog::teacher() const{
-    return ui->teacherName->text();
+    return ui->teacher->text();
 }
 
 int CourseDialog::nrH() const{
