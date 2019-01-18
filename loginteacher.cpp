@@ -60,7 +60,7 @@ void LoginTeacher::on_loginButton_clicked()
 
 void LoginTeacher::on_newTeacherButton_clicked()
 {
-    hide();
+    //hide();
     newTeacher = new NewTeacher();
     newTeacher->show();
 

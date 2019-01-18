@@ -24,8 +24,6 @@ private slots:
 
     void on_newTeacherButton_clicked();
 
-    void on_backButton_clicked();
-
 private:
     Ui::LoginTeacher *ui;
     MenuTeacher * menuteacher;

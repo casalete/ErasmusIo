@@ -76,3 +76,8 @@ void NewTeacher::on_submitButton_clicked()
 //    ui->spinBox_duration->clear();
 }
 
+
+void NewTeacher::on_cancelButton_clicked()
+{
+    hide();
+}

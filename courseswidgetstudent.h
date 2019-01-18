@@ -15,6 +15,9 @@ public:
     explicit CoursesWidgetStudent(QWidget *parent = 0);
     ~CoursesWidgetStudent();
 
+private slots:
+    void on_back_clicked();
+
 private:
     Ui::CoursesWidgetStudent *ui;
 };

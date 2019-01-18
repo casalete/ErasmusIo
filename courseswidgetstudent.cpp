@@ -13,3 +13,8 @@ CoursesWidgetStudent::~CoursesWidgetStudent()
 {
     delete ui;
 }
+
+void CoursesWidgetStudent::on_back_clicked()
+{
+    hide();
+}
