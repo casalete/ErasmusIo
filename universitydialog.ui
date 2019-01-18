@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>883</width>
-    <height>556</height>
+    <width>750</width>
+    <height>507</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,22 +16,25 @@
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>300</y>
-     <width>166</width>
-     <height>31</height>
+     <x>40</x>
+     <y>440</y>
+     <width>171</width>
+     <height>32</height>
     </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
    </property>
    <property name="standardButtons">
     <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>60</x>
+     <x>130</x>
      <y>20</y>
-     <width>131</width>
+     <width>111</width>
      <height>17</height>
     </rect>
    </property>
@@ -39,22 +42,12 @@
     <string>ADD UNIVERSITY</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_name">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>60</y>
-     <width>108</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="name">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>60</y>
-     <width>41</width>
+     <x>30</x>
+     <y>90</y>
+     <width>54</width>
      <height>17</height>
     </rect>
    </property>
@@ -62,23 +55,13 @@
     <string>Name</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_country">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>110</y>
-     <width>108</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="country">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>110</y>
-     <width>51</width>
-     <height>21</height>
+     <y>140</y>
+     <width>54</width>
+     <height>17</height>
     </rect>
    </property>
    <property name="text">
@@ -88,34 +71,54 @@
   <widget class="QLabel" name="contactName">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>160</y>
-     <width>151</width>
+     <x>30</x>
+     <y>200</y>
+     <width>131</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Contact Person Name</string>
+    <string>Contact person name</string>
    </property>
   </widget>
   <widget class="QLabel" name="contactEmail">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>200</y>
-     <width>141</width>
+     <x>30</x>
+     <y>250</y>
+     <width>121</width>
      <height>17</height>
     </rect>
    </property>
    <property name="text">
-    <string>Contact Person Email</string>
+    <string>Contact person email</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_name">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>90</y>
+     <width>113</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_country">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>130</y>
+     <width>113</width>
+     <height>25</height>
+    </rect>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit_contactName">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>160</y>
+     <x>170</x>
+     <y>200</y>
      <width>113</width>
      <height>25</height>
     </rect>
@@ -124,8 +127,8 @@
   <widget class="QLineEdit" name="lineEdit_contactEmail">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>190</y>
+     <x>170</x>
+     <y>250</y>
      <width>113</width>
      <height>25</height>
     </rect>
@@ -133,5 +136,38 @@
   </widget>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>UniversityDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>UniversityDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

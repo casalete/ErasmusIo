@@ -13,14 +13,13 @@ UniversityDialog::~UniversityDialog()
     delete ui;
 }
 
-void UniversityDialog::on_buttonBox_accepted()
-{
-    accept();
+void UniversityDialog::on_buttonBox_accepted(){
+    QDialog::accept();
 }
 
 void UniversityDialog::on_buttonBox_rejected()
 {
-    reject();
+    QDialog::reject();
 }
 
 QString UniversityDialog::contactEmail() const{
@@ -35,4 +34,5 @@ QString UniversityDialog::country() const{
 QString UniversityDialog::name() const{
     return ui->name->text();
 }
+
 
