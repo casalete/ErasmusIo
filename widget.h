@@ -18,6 +18,11 @@ public:
 private slots:
     void on_addCourse_clicked();
 
+
+    void on_backButton_clicked();
+
+    void on_back_clicked();
+
 private:
     Ui::Widget *ui;
 

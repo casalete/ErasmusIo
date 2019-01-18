@@ -15,7 +15,7 @@ MenuTeacher::~MenuTeacher()
 
 void MenuTeacher::on_coursesButton_clicked()
 {
-    hide();
+   // hide();
     widget = new Widget();
     widget->show();
 }

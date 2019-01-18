@@ -73,32 +73,6 @@ font: 75 10pt &quot;Courier&quot;;</string>
     <string>I don't have an account</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="backButton">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>50</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Courier</family>
-     <pointsize>10</pointsize>
-     <weight>75</weight>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#backButton{
-	background-color: rgb(255, 179, 47);
-}</string>
-   </property>
-   <property name="text">
-    <string>BACK</string>
-   </property>
-  </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>

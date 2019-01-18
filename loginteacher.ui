@@ -166,26 +166,6 @@
       </property>
      </widget>
     </item>
-    <item>
-     <widget class="QPushButton" name="backButton">
-      <property name="font">
-       <font>
-        <family>Courier</family>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">#backButton{
-	background-color: rgb(255, 196, 19);
-}</string>
-      </property>
-      <property name="text">
-       <string>BACK</string>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
  </widget>

@@ -1,6 +1,10 @@
 #include "widget.h"
 #include "ui_widget.h"
 #include "coursedialog.h"
+#include "QSql"
+#include "QSqlDatabase"
+#include <QDebug>
+#include <QSqlQuery>
 
 Widget::Widget(QWidget *parent) :
     QWidget(parent),
@@ -45,4 +49,34 @@ void Widget::on_addCourse_clicked()
     ui->tableWidget->setItem(counter, OPTIONALITY, new QTableWidgetItem(optionality));
 
 
+{
+    QSqlDatabase db_courses;
+    db_courses = QSqlDatabase::addDatabase("QPSQL","courses");
+    db_courses.setHostName("localhost");  // host
+    db_courses.setDatabaseName("erasmusio");
+    db_courses.setUserName("erasmusio");
+    db_courses.setPassword("erasmusio");
+    db_courses.open();
+    QSqlQuery query(db_courses);
+
+
+    //query.prepare("SELECT first_name, last_name, email, password FROM student where id ='" + id_string + "'");
+
+    query.prepare("INSERT into course (name, teacher_name, no_credits, optionality, no_hours_w)"
+             "VALUES(?,?,?,?,?)");
+     query.addBindValue(courseName);
+     query.addBindValue(teacherName);
+     query.addBindValue(nrCreditPoints);
+     query.addBindValue(optionality);
+     query.addBindValue(nrHours);
+
+     query.exec();
+}
+
+
+}
+
+void Widget::on_back_clicked()
+{
+    hide();
 }

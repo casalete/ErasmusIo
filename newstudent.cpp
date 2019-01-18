@@ -93,3 +93,8 @@ void NewStudent::on_submitButton_clicked()
 //    ui->lineEdit_email->clear();
 //    ui->lineEdit_password->clear();
 
+
+void NewStudent::on_cancelButton_clicked()
+{
+    hide();
+}
