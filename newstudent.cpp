@@ -43,18 +43,18 @@ void NewStudent::on_submitButton_clicked()
     m.openConnection();
     QSqlDatabase db = QSqlDatabase::database();
     QSqlQuery query(db);
-    query.prepare("INSERT INTO student (first_name, last_name, email, country, password, study_duration, semester,university_name)"
+    query.prepare("INSERT INTO student (first_name, last_name, email, country, study_duration, semester, university_name,  password)"
                "VALUES (?,?,?,?,?,?,?,?)");
 
     query.addBindValue(form_first_name);
     query.addBindValue(form_last_name);
     query.addBindValue(form_email);
     query.addBindValue(form_country);
-    query.addBindValue(form_password);
     query.addBindValue(form_study_duration);
     query.addBindValue(form_semester.toString());
     //query.addBindValue(form_study_form);
     query.addBindValue(form_university_name);
+     query.addBindValue(form_password);
 
 
    // query.addBindValue(role);

@@ -147,8 +147,7 @@ MenuStudent::~MenuStudent()
 
 void MenuStudent::on_coursesButton_clicked()
 {
-    hide();
-    widget = new Widget();
+    widget = new CoursesWidgetStudent();
     widget->show();
 }
 
