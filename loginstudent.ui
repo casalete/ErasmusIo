@@ -6,100 +6,189 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>444</width>
+    <height>358</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QLabel" name="label">
-   <property name="geometry">
-    <rect>
-     <x>120</x>
-     <y>40</y>
-     <width>161</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>LOG IN TO ERASMUSio</string>
-   </property>
-  </widget>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/pinned.jpg);
+
+
+
+</string>
+  </property>
   <widget class="QPushButton" name="loginButton">
    <property name="geometry">
     <rect>
-     <x>120</x>
-     <y>180</y>
-     <width>114</width>
-     <height>32</height>
+     <x>330</x>
+     <y>20</y>
+     <width>75</width>
+     <height>23</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Courier</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#loginButton{
+	background-color: rgb(0, 170, 0);
+}</string>
+   </property>
    <property name="text">
-    <string>login</string>
+    <string>LOGIN</string>
    </property>
   </widget>
   <widget class="QPushButton" name="newStudentButton">
    <property name="geometry">
     <rect>
-     <x>110</x>
-     <y>230</y>
-     <width>161</width>
-     <height>23</height>
+     <x>130</x>
+     <y>120</y>
+     <width>191</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Courier</family>
+     <pointsize>10</pointsize>
+     <weight>9</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-color: rgb(255, 255, 0);
+
+font: 75 10pt &quot;Courier&quot;;</string>
    </property>
    <property name="text">
     <string>I don't have an account</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_password">
+  <widget class="QPushButton" name="backButton">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>130</y>
-     <width>108</width>
-     <height>25</height>
+     <x>330</x>
+     <y>50</y>
+     <width>75</width>
+     <height>23</height>
     </rect>
    </property>
-   <property name="echoMode">
-    <enum>QLineEdit::Password</enum>
+   <property name="font">
+    <font>
+     <family>Courier</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
-  </widget>
-  <widget class="QLineEdit" name="lineEdit_username">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>80</y>
-     <width>108</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>80</x>
-     <y>80</y>
-     <width>62</width>
-     <height>17</height>
-    </rect>
+   <property name="styleSheet">
+    <string notr="true">#backButton{
+	background-color: rgb(255, 179, 47);
+}</string>
    </property>
    <property name="text">
-    <string>Email:</string>
+    <string>BACK</string>
    </property>
   </widget>
-  <widget class="QLabel" name="label_3">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>80</x>
-     <y>130</y>
-     <width>58</width>
-     <height>17</height>
+     <x>101</x>
+     <y>11</y>
+     <width>207</width>
+     <height>78</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Password:</string>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
    </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <family>Courier</family>
+        <pointsize>10</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="text">
+       <string>LOG IN TO ERASMUSio</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="label_email">
+        <property name="font">
+         <font>
+          <family>Courier</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Email</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_username">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="label_password">
+        <property name="font">
+         <font>
+          <family>Courier</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Password</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEdit_password">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
