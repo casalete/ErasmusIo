@@ -36,7 +36,6 @@ SOURCES += \
     menuteacher.cpp \
     newstudent.cpp \
     newteacher.cpp \
-    createstudent.cpp \
     universitydialog.cpp \	
     universitywidget.cpp \
     test.cpp \
@@ -54,7 +53,6 @@ HEADERS += \
     menuteacher.h \
     newstudent.h \
     newteacher.h \
-    createstudent.h \
     universitydialog.h \
     universitywidget.h \
     test.h \

@@ -39,8 +39,6 @@ void NewStudent::on_submitButton_clicked()
     int form_study_duration = ui->spinBox_duration->value();
     //QString role = "STUDENT";
 
-    MainWindow m;
-    m.openConnection();
     QSqlDatabase db = QSqlDatabase::database();
     QSqlQuery query(db);
     query.prepare("INSERT INTO student (first_name, last_name, email, country, study_duration, semester, university_name,  password)"
