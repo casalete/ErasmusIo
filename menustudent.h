@@ -41,6 +41,7 @@ public:
     int getStudentId(){
         return student_id;
     }
+    void doQuery(int);
 
 public slots:
     void setValueFromSignal(int val);

@@ -27,8 +27,6 @@ void LoginStudent::on_loginButton_clicked()
 {
         QString email = ui->lineEdit_username->text();
         QString password = ui->lineEdit_password->text();
-        MainWindow m;
-        m.openConnection();
         QSqlDatabase db = QSqlDatabase::database();
         QSqlQuery query(db);
         //query.prepare("SELECT * from useres where email="+email+"'and password ='"+password);
@@ -57,6 +55,7 @@ void LoginStudent::on_loginButton_clicked()
          //    connect(this, SIGNAL(valSignal(int)),menustudent,SLOT(setValueFromSignal(int)));
             //emit(valSignal(login_id));
             menustudent = new MenuStudent(this);
+            menustudent->doQuery(login_id);
             menustudent->show();
         }
         else

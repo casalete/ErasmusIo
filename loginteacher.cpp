@@ -25,8 +25,6 @@ void LoginTeacher::on_loginButton_clicked()
 {
     QString email = ui->lineEdit_usernamet->text();
     QString password = ui->lineEdit_passwordt->text();
-    MainWindow m;
-    m.openConnection();
     QSqlDatabase db = QSqlDatabase::database();
     QSqlQuery query(db);
     //query.prepare("SELECT * from useres where email="+email+"'and password ='"+password);

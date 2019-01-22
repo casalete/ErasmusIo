@@ -18,12 +18,7 @@ MenuTeacher::MenuTeacher(QWidget *parent) :
     ui->setupUi(this);
 
     QSqlDatabase db_menuteacher;
-    db_menuteacher = QSqlDatabase::addDatabase("QPSQL","menustudent");
-    db_menuteacher.setHostName("localhost");  // host
-    db_menuteacher.setDatabaseName("erasmusio");
-    db_menuteacher.setUserName("erasmusio");
-    db_menuteacher.setPassword("erasmusio");
-    db_menuteacher.open();
+    db_menuteacher = QSqlDatabase::database();
     QSqlQuery query(db_menuteacher);
     //QString id_string = QString::number(student_id);
 

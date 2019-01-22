@@ -5,14 +5,13 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-
+    openConnection();
     ui->setupUi(this);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
-    //openConnection();
 }
 
 void MainWindow::on_studentButton_clicked()
