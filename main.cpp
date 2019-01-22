@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
     a.setStyle("fusion");
     MainWindow mainWindow;
     //mainWindow.setStyleSheet("background-image:url(:maini.jpg)");
-       mainWindow.show();
+    mainWindow.show();
 
     return a.exec();
 }

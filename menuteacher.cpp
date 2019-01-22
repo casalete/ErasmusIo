@@ -17,18 +17,33 @@ MenuTeacher::MenuTeacher(QWidget *parent) :
 {
     ui->setupUi(this);
 
+
+}
+
+MenuTeacher::~MenuTeacher()
+{
+    delete ui;
+}
+
+void MenuTeacher::on_coursesButton_clicked()
+{
+   // hide();
+    widget = new Widget();
+    widget->show();
+
+}
+void MenuTeacher::doQuery(int login_id){
+    teacher_id = login_id;
     QSqlDatabase db_menuteacher;
-    db_menuteacher = QSqlDatabase::addDatabase("QPSQL","menustudent");
-    db_menuteacher.setHostName("localhost");  // host
-    db_menuteacher.setDatabaseName("erasmusio");
-    db_menuteacher.setUserName("erasmusio");
-    db_menuteacher.setPassword("erasmusio");
-    db_menuteacher.open();
+    db_menuteacher = QSqlDatabase::database();
     QSqlQuery query(db_menuteacher);
     //QString id_string = QString::number(student_id);
 
     //query.prepare("SELECT first_name, last_name, email, password FROM student where id ='" + id_string + "'");
-     query.prepare("SELECT first_name, last_name, email,course_name, password FROM teacher ");
+
+    QString id_string = QString::number(teacher_id);
+    QString queryString = "SELECT first_name, last_name, email,course_name, password FROM teacher where id ='" + id_string + "'";
+     query.prepare(queryString);
 
         query.exec();
 
@@ -48,17 +63,4 @@ MenuTeacher::MenuTeacher(QWidget *parent) :
                QString password = query.value(4).toString();
                ui->lineEdit_password->setText(password);
            }
-
-}
-
-MenuTeacher::~MenuTeacher()
-{
-    delete ui;
-}
-
-void MenuTeacher::on_coursesButton_clicked()
-{
-   // hide();
-    widget = new Widget();
-    widget->show();
 }

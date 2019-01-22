@@ -16,12 +16,6 @@ public:
     explicit MenuStudent(QWidget *parent = nullptr);
 
     ~MenuStudent();
-//    MenuStudent(int id){
-//    student_id = id;
-//}
-
-
-
 
 private slots:
     void on_coursesButton_clicked();
@@ -41,6 +35,7 @@ public:
     int getStudentId(){
         return student_id;
     }
+    void doQuery(int);
 
 public slots:
     void setValueFromSignal(int val);
