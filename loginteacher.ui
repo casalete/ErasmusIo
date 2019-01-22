@@ -6,16 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>407</width>
-    <height>376</height>
+    <width>1099</width>
+    <height>676</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/unic.jpg);
-</string>
+   <string notr="true">background-image: url(:/triupd.png);</string>
   </property>
   <widget class="QPushButton" name="newTeacherButton">
    <property name="geometry">
@@ -44,7 +43,7 @@
      <x>90</x>
      <y>10</y>
      <width>193</width>
-     <height>78</height>
+     <height>79</height>
     </rect>
    </property>
    <property name="font">

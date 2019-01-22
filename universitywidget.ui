@@ -6,15 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>529</width>
-    <height>341</height>
+    <width>1100</width>
+    <height>676</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/unic.jpg);</string>
+   <string notr="true">background-image: url(:/triupd.png);</string>
   </property>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">

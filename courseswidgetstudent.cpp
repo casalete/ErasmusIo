@@ -23,7 +23,7 @@ CoursesWidgetStudent::CoursesWidgetStudent(QWidget *parent) :
 
      QSqlQueryModel* modal = new QSqlQueryModel();
      QSqlQuery* qry = new QSqlQuery(db_courses);
-     qry->prepare("SELECT name, teacher_name, no_credits, optionality, no_hours_w FROM course");
+     qry->prepare("SELECT name, teacher_name, no_credits, optionality, no_hours FROM course");
      qry->exec();
      modal->setQuery(*qry);
      ui->tableView->setModel(modal);

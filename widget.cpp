@@ -62,7 +62,7 @@ void Widget::on_addCourse_clicked()
 
     //query.prepare("SELECT first_name, last_name, email, password FROM student where id ='" + id_string + "'");
 
-    query.prepare("INSERT into course (name, teacher_name, no_credits, optionality, no_hours_w)"
+    query.prepare("INSERT into course (name, teacher_name, no_credits, optionality, no_hours)"
              "VALUES(?,?,?,?,?)");
      query.addBindValue(courseName);
      query.addBindValue(teacherName);

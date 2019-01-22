@@ -115,8 +115,8 @@ MenuStudent::MenuStudent(QWidget *parent) :
     QSqlQuery query(db_menustudent);
     QString id_string = QString::number(student_id);
 
-    QString queryString = "SELECT first_name, last_name, email, password FROM student where id ='" + id_string + "'";
-    // query.prepare("SELECT first_name, last_name, email,country,university_name, password FROM student ");
+    QString queryString = "SELECT first_name, last_name, email,country,study_duration, semester, university_name, password FROM student";
+    // query.prepare("SELECT first_name, last_name, email,country,study_duration, semester, university_name, password FROM student ");
     query.prepare(queryString);
         query.exec();
 

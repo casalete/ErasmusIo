@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>687</width>
-    <height>443</height>
+    <width>1098</width>
+    <height>675</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-image: url(:/triupd.png);</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
