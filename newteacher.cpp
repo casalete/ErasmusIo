@@ -44,8 +44,7 @@ void NewTeacher::on_submitButton_clicked()
     QString form_course_name = ui->lineEdit->text();
 
 
-    MainWindow m;
-    m.openConnection();
+
     QSqlDatabase db = QSqlDatabase::database();
     QSqlQuery query(db);
     query.prepare("INSERT INTO teacher (first_name, last_name, email, password, course_name)"
