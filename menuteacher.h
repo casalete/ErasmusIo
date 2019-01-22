@@ -15,6 +15,7 @@ class MenuTeacher : public QDialog
 
 public:
     explicit MenuTeacher(QWidget *parent = nullptr);
+
     ~MenuTeacher();
 
 private slots:
@@ -23,6 +24,14 @@ private slots:
 private:
     Ui::MenuTeacher *ui;
     Widget * widget;
+
+private:
+    int teacher_id;
+
+public:
+   void doQuery(int);
+
+
 };
 
 #endif // MENUTEACHER_H

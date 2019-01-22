@@ -28,9 +28,10 @@ void LoginTeacher::on_loginButton_clicked()
     QSqlDatabase db = QSqlDatabase::database();
     QSqlQuery query(db);
     //query.prepare("SELECT * from useres where email="+email+"'and password ='"+password);
-    query.prepare("SELECT email, password FROM teacher");
+    query.prepare("SELECT email, password, id FROM teacher");
     query.exec();
     int k=0;
+    int login_id = 0;
     while (query.next())
     {
 
@@ -40,6 +41,7 @@ void LoginTeacher::on_loginButton_clicked()
        if (email == emailFromDB && password == passwordFromDb)
            {
                k++;
+               login_id = query.value(2).toInt();
            }
     }
     if(k>0){
@@ -47,6 +49,7 @@ void LoginTeacher::on_loginButton_clicked()
         //m.closeConnection();
         this->hide();
         menuteacher = new MenuTeacher(this);
+        menuteacher->doQuery(login_id);
         menuteacher->show();
     }
     else
