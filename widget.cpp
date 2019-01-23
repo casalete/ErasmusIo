@@ -67,7 +67,7 @@ void Widget::on_addCourse_clicked()
 
     //query.prepare("SELECT first_name, last_name, email, password FROM student where id ='" + id_string + "'");
      QSqlQuery query_add_course(db_course);
-     query_add_course.prepare("INSERT into course (name, teacher_name, no_credits, optionality, no_hours_w, id_teacher)"
+     query_add_course.prepare("INSERT into course (name, teacher_name, no_credits, optionality, no_hours, id_teacher)"
              "VALUES(?,?,?,?,?,?)");
      query_add_course.addBindValue(courseName);
      query_add_course.addBindValue(teacherName);
