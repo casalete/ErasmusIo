@@ -50,6 +50,7 @@ void Widget::on_addCourse_clicked()
 
 
 
+
     QSqlDatabase db_course;
     db_course = QSqlDatabase::database("QPSQL");
     QSqlQuery query_teacher_id(db_course);
