@@ -40,7 +40,7 @@ void CourseDialog::on_buttonBox_accepted()
 //    m.openConnection();
 //    QSqlDatabase db = QSqlDatabase::database();
 //    QSqlQuery query(db);
-//    query.prepare("INSERT INTO course (name, name_teacher, no_credits, optionality, no_hours)"
+//    query.prepare("INSERT INTO course (name, name_teacher, no_credits, optionality, no_hours_w)"
 //               "VALUES (?,?,?,?,?)");
 
 //    query.addBindValue(form_name);
