@@ -49,32 +49,38 @@ void Widget::on_addCourse_clicked()
     ui->tableWidget->setItem(counter, OPTIONALITY, new QTableWidgetItem(optionality));
 
 
-{
-    QSqlDatabase db_courses;
-    db_courses = QSqlDatabase::addDatabase("QPSQL","courses");
-    db_courses.setHostName("localhost");  // host
-    db_courses.setDatabaseName("erasmusio");
-    db_courses.setUserName("erasmusio");
-    db_courses.setPassword("erasmusio");
-    db_courses.open();
-    QSqlQuery query(db_courses);
+
+    QSqlDatabase db_course;
+    db_course = QSqlDatabase::database("QPSQL");
+    QSqlQuery query_teacher_id(db_course);
+
+    QString queryString = "SELECT id from teacher where last_name ='" + teacherName + "'";
+    query_teacher_id.prepare(queryString);
+    query_teacher_id.exec();
+    int teacherID;
+    while(query_teacher_id.next())
+           {
+            teacherID = query_teacher_id.value(0).toInt();
+           }
+
 
 
     //query.prepare("SELECT first_name, last_name, email, password FROM student where id ='" + id_string + "'");
+     QSqlQuery query_add_course(db_course);
+     query_add_course.prepare("INSERT into course (name, teacher_name, no_credits, optionality, no_hours, id_teacher)"
+             "VALUES(?,?,?,?,?,?)");
+     query_add_course.addBindValue(courseName);
+     query_add_course.addBindValue(teacherName);
+     query_add_course.addBindValue(nrCreditPoints);
+     query_add_course.addBindValue(optionality);
+     query_add_course.addBindValue(nrHours);
+     query_add_course.addBindValue(teacherID);
 
-    query.prepare("INSERT into course (name, teacher_name, no_credits, optionality, no_hours)"
-             "VALUES(?,?,?,?,?)");
-     query.addBindValue(courseName);
-     query.addBindValue(teacherName);
-     query.addBindValue(nrCreditPoints);
-     query.addBindValue(optionality);
-     query.addBindValue(nrHours);
+     query_add_course.exec();
 
-     query.exec();
 }
 
 
-}
 
 void Widget::on_back_clicked()
 {
