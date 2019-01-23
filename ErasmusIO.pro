@@ -41,7 +41,8 @@ SOURCES += \
     test.cpp \
     courseswidgetstudent.cpp \
     dialogcoursesstudent.cpp \
-    courseinfo.cpp
+    courseinfo.cpp \
+    details.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -58,7 +59,8 @@ HEADERS += \
     test.h \
     courseswidgetstudent.h \
     dialogcoursesstudent.h \
-    courseinfo.h
+    courseinfo.h \
+    details.h
 
 FORMS += \
         mainwindow.ui \
@@ -76,7 +78,8 @@ FORMS += \
     test.ui \
     courseswidgetstudent.ui \
     dialogcoursesstudent.ui \
-    courseinfo.ui
+    courseinfo.ui \
+    details.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
