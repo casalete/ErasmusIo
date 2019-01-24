@@ -79,6 +79,9 @@ void Widget::on_addCourse_clicked()
 
      query_add_course.exec();
 
+
+
+
 }
 
 

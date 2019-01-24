@@ -18,8 +18,15 @@ public:
 private slots:
     void on_back_clicked();
 
+    void on_tableView_activated(const QModelIndex &index);
+
+    void on_pushButton_clicked();
+
 private:
     Ui::CoursesWidgetStudent *ui;
+
+public:
+ //   void init(int);
 };
 
 #endif // COURSESWIDGETSTUDENT_H
