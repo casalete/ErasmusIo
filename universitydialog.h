@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QDialog>
 
+#include "universitydialog.h"
+
 namespace Ui {
 class UniversityDialog;
 }
@@ -27,6 +29,10 @@ private slots:
     void on_buttonBox_accepted();
 
     void on_buttonBox_rejected();
+
+    void on_submit_clicked();
+
+    void on_cancel_clicked();
 
 private:
     Ui::UniversityDialog *ui;

@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     openConnection();
     ui->setupUi(this);
+      setWindowTitle("Welcome");
 }
 
 MainWindow::~MainWindow()

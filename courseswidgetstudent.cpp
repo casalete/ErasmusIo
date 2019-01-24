@@ -10,13 +10,12 @@ CoursesWidgetStudent::CoursesWidgetStudent(QWidget *parent) :
     ui(new Ui::CoursesWidgetStudent)
 {
     ui->setupUi(this);
-}
+      setWindowTitle("Courses");
 
 CoursesWidgetStudent::~CoursesWidgetStudent()
 {
     delete ui;
 }
-
 void CoursesWidgetStudent::on_back_clicked()
 {
     hide();
@@ -33,10 +32,10 @@ void CoursesWidgetStudent::init(int id){
     query_course->exec();
     modalTable->setQuery(*query_course);
     ui->tableView->setModel(modalTable);
+
     query_course->prepare("SELECT name from course");
     query_course->exec();
     ui->comboBox->setModel(modalTable);
-
 
     QSqlQueryModel* modalList = new QSqlQueryModel();
     QSqlQuery* query_student_courses = new QSqlQuery(db_courses);

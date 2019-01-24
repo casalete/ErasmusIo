@@ -13,9 +13,9 @@ Widget::Widget(QWidget *parent) :
     ui->setupUi(this);
     QStringList labels;
     setWindowTitle("Courses");
-    ui->tableWidget->setColumnCount(5);
-    labels << "COURSE" << "TEACHER" << "NUMBER OF HOURS"<< "NUMBER OF CREDIT POINTS" << "OPTIONALITY";
-    ui->tableWidget->setHorizontalHeaderLabels(labels);
+//    ui->tableWidget->setColumnCount(5);
+//    labels << "COURSE" << "TEACHER" << "NUMBER OF HOURS"<< "NUMBER OF CREDIT POINTS" << "OPTIONALITY";
+//    ui->tableWidget->setHorizontalHeaderLabels(labels);
 }
 
 Widget::~Widget()
@@ -40,16 +40,13 @@ void Widget::on_addCourse_clicked()
     nrCreditPoints = cd.nrCP();
     optionality = cd.optionality();
 
-    ui->tableWidget->insertRow(ui->tableWidget->rowCount());
-    counter = ui->tableWidget->rowCount() - 1;
-    ui->tableWidget->setItem(counter, COURSE, new QTableWidgetItem(courseName));
-    ui->tableWidget->setItem(counter, TEACHER, new QTableWidgetItem(teacherName));
-    ui->tableWidget->setItem(counter, NROFHOURS, new QTableWidgetItem(QString::number(nrHours)));
-    ui->tableWidget->setItem(counter, NROFCREDITPOINTS, new QTableWidgetItem(QString::number(nrCreditPoints)));
-    ui->tableWidget->setItem(counter, OPTIONALITY, new QTableWidgetItem(optionality));
-
-
-
+//    ui->tableWidget->insertRow(ui->tableWidget->rowCount());
+//    counter = ui->tableWidget->rowCount() - 1;
+//    ui->tableWidget->setItem(counter, COURSE, new QTableWidgetItem(courseName));
+//    ui->tableWidget->setItem(counter, TEACHER, new QTableWidgetItem(teacherName));
+//    ui->tableWidget->setItem(counter, NROFHOURS, new QTableWidgetItem(QString::number(nrHours)));
+//    ui->tableWidget->setItem(counter, NROFCREDITPOINTS, new QTableWidgetItem(QString::number(nrCreditPoints)));
+//    ui->tableWidget->setItem(counter, OPTIONALITY, new QTableWidgetItem(optionality));
 
     QSqlDatabase db_course;
     db_course = QSqlDatabase::database("QPSQL");
@@ -64,8 +61,6 @@ void Widget::on_addCourse_clicked()
             teacherID = query_teacher_id.value(0).toInt();
            }
 
-
-
     //query.prepare("SELECT first_name, last_name, email, password FROM student where id ='" + id_string + "'");
      QSqlQuery query_add_course(db_course);
      query_add_course.prepare("INSERT into course (name, teacher_name, no_credits, optionality, no_hours, id_teacher)"
@@ -79,12 +74,7 @@ void Widget::on_addCourse_clicked()
 
      query_add_course.exec();
 
-
-
-
 }
-
-
 
 void Widget::on_back_clicked()
 {

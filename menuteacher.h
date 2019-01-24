@@ -4,6 +4,7 @@
 #include <QDialog>
 
 #include "widget.h"
+#include "details.h"
 
 namespace Ui {
 class MenuTeacher;
@@ -20,10 +21,12 @@ public:
 
 private slots:
     void on_coursesButton_clicked();
+    void on_detailsButton_clicked();
 
 private:
     Ui::MenuTeacher *ui;
     Widget * widget;
+    Details * details;
 
 private:
     int teacher_id;

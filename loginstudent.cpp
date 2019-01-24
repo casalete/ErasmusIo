@@ -13,6 +13,7 @@ LoginStudent::LoginStudent(QWidget *parent) :
     ui(new Ui::LoginStudent)
 {
     ui->setupUi(this);
+    setWindowTitle("Login Student");
     //openConnection();
 //    if (!openConnection())
 //        qDebug() << "Eroare la baza de date!";
