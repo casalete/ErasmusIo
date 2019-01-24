@@ -24,9 +24,10 @@ private slots:
 
 private:
     Ui::CoursesWidgetStudent *ui;
+    int id_student;
 
 public:
- //   void init(int);
+  void init(int);
 };
 
 #endif // COURSESWIDGETSTUDENT_H

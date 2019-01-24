@@ -29,6 +29,7 @@ MenuStudent::~MenuStudent()
 void MenuStudent::on_coursesButton_clicked()
 {
     widget = new CoursesWidgetStudent();
+    widget->init(student_id);
     widget->show();
 }
 
