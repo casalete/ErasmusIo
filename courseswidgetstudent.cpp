@@ -79,7 +79,26 @@ void CoursesWidgetStudent::on_pushButton_clicked()
     query_courses.addBindValue(id_student);
     query_courses.exec();
 
+    reset();
+
 
     //query.prepare("INSERT INTO student (first_name, last_name, email, country, study_duration, semester, university_name,  password)"
      //                  "VALUES (?,?,?,?,?,?,?,?)");
+}
+
+void CoursesWidgetStudent::reset(){
+    QString id_student_string = QString::number(id_student);
+
+    ui->tableView->close();
+
+    QSqlDatabase db_courses_reload;
+    db_courses_reload = QSqlDatabase::database("QPSQL");
+    QSqlQueryModel* modalList = new QSqlQueryModel();
+    QSqlQuery* query_reset = new QSqlQuery(db_courses_reload);
+    query_reset->prepare("SELECT name FROM public.course WHERE course.id IN (SELECT student_course.id_course FROM public.student_course WHERE student_course.id_student = '"+id_student_string+"')");
+    query_reset->exec();
+    modalList->setQuery(*query_reset);
+    ui->listView->setModel(modalList);
+
+    ui->tableView->show();
 }
