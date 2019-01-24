@@ -130,7 +130,7 @@
     <string>SAVE</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="myCoursesBtn">
    <property name="geometry">
     <rect>
      <x>20</x>
