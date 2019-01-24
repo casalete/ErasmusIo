@@ -41,7 +41,7 @@ void NewTeacher::on_submitButton_clicked()
     QString form_last_name = ui->lineEdit_lastName->text();
     QString form_email = ui->lineEdit_email->text();
     QString form_password = ui->lineEdit_password->text();
-    QString form_course_name = ui->lineEdit->text();
+    QString form_course_name = ui->lineEdit_courseName->text();
 
 
 
