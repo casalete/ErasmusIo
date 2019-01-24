@@ -23,6 +23,8 @@ private slots:
     void on_coursesButton_clicked();
     void on_detailsButton_clicked();
 
+    void on_pushButton_save_clicked();
+
 private:
     Ui::MenuTeacher *ui;
     Widget * widget;

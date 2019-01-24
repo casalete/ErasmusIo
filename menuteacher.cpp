@@ -74,3 +74,26 @@ void MenuTeacher::doQuery(int login_id){
                ui->lineEdit_password->setText(password);
            }
 }
+
+void MenuTeacher::on_pushButton_save_clicked()
+{
+    QString firstname = ui->lineEdit_firstName->text();
+    QString lastname = ui->lineEdit_lastName->text();
+    QString email = ui->lineEdit_email->text();
+    QString coursename = ui->lineEdit_courseName->text();
+    QString password = ui->lineEdit_password->text();
+
+    QString teacherIdString = QString::number(teacher_id);
+    QSqlDatabase db_teacher;
+    db_teacher = QSqlDatabase::database("QPSQL");
+    QSqlQuery query_teacher(db_teacher);
+    query_teacher.prepare("UPDATE teacher SET first_name='"+firstname+"',last_name='"+lastname+"',email='"+email+"',course_name='"+coursename+"',password='"+password+"'WHERE id = '"+teacherIdString+"'");
+    if(query_teacher.exec()){
+        QMessageBox::information(this,tr("SAVE"),tr("TEACHER EDITED"));
+    }
+    else{
+        QMessageBox::critical(this,tr("error::"),tr("FAILED TO EDIT TEACHER"));
+    }
+
+
+}
