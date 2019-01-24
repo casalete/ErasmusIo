@@ -37,6 +37,7 @@ void MenuTeacher::on_detailsButton_clicked()
 {
    // hide();
     details = new Details();
+    details->init(teacher_id);
     details->show();
 
 }

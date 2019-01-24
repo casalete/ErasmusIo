@@ -21,9 +21,14 @@ private slots:
     void on_viewUniversities_clicked();
     void on_back_clicked();
 
+    void on_viewStudentsButton_clicked();
+
 private:
     Ui::Details *ui;
     ViewUnis *viewunis;
+    int id_teacher;
+public:
+    void init(int);
 };
 
 #endif // DETAILS_H
