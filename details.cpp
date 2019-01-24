@@ -47,6 +47,7 @@ void Details::init(int id){
 
 void Details::on_viewStudentsButton_clicked()
 {
+    int k = 0;
     QString courseNameString = ui->comboBox_selectCourse->currentText();
     QSqlDatabase db_student;
     db_student = QSqlDatabase::database("QPSQL");
@@ -54,8 +55,14 @@ void Details::on_viewStudentsButton_clicked()
     QSqlQuery* query_student = new QSqlQuery(db_student);
     query_student->prepare("SELECT * FROM public.student WHERE id IN(SELECT id_student FROM public.student_course WHERE id_course = (SELECT id FROM public.course WHERE public.course.name ='" + courseNameString+ "'))");
     query_student->exec();
+    while(query_student->next()){
+        k++;
+    }
+
     modalTable->setQuery(*query_student);
     ui->tableView->setModel(modalTable);
+    QString nrStud = QString::number(k);
+    ui->nrStudLabel->setText(nrStud);
 }
 
 void Details::on_search_clicked()

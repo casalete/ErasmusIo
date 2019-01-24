@@ -22,6 +22,8 @@ private slots:
     void on_coursesButton_clicked();
     void on_myCoursesBtn_clicked();
 
+    void on_submitButton_clicked();
+
 private:
     Ui::MenuStudent *ui;
     CoursesWidgetStudent * widget;

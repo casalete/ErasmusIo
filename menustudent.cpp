@@ -37,6 +37,7 @@ void MenuStudent::on_coursesButton_clicked()
 void MenuStudent::on_myCoursesBtn_clicked()
 {
     mycourses = new MyCourses();
+    mycourses->init(student_id);
     mycourses->show();
 }
 
@@ -60,10 +61,10 @@ void MenuStudent::doQuery(int val){
            ui->lineEdit_firstName->setText(firstname);
 
            QString lastname = query.value(1).toString();
-            ui->lineEdit_lastName->setText(lastname);
+           ui->lineEdit_lastName->setText(lastname);
 
            QString email = query.value(2).toString();
-            ui->lineEdit_email->setText(email);
+           ui->lineEdit_email->setText(email);
 
            QString country = query.value(3).toString();
            ui->lineEdit_country->setText(country);
@@ -74,7 +75,6 @@ void MenuStudent::doQuery(int val){
            QString university_name = query.value(5).toString();
            ui->lineEdit_university->setText(university_name);
 
-
            QString duration = query.value(6).toString();
            ui->lineEdit_duration->setText(duration);
 
@@ -83,5 +83,28 @@ void MenuStudent::doQuery(int val){
 
 
 
+
+
+
+
+
        }
 }
+
+//void MenuStudent::on_submitButton_clicked()
+//{
+//    QString firstname = ui->lineEdit_firstName->text();
+//    QString lastname = ui->lineEdit_firstName->text();
+//    QString email = ui->lineEdit_firstName->text();
+//    QString country = ui->lineEdit_firstName->text();
+//    QString password = ui->lineEdit_firstName->text();
+//    QString university_name = ui->lineEdit_firstName->text();
+//    QString duration = ui->lineEdit_firstName->text();
+//    QString semester = ui->lineEdit_firstName->text();
+
+//    QSqlDatabase db_student;
+//    db_student = QSqlDatabase::database("QPSQL");
+//    QSqlQuery query_student(db_student);
+//    query_student.prepare("update student set first_name = '"+firstname+"    "")
+
+//}

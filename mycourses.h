@@ -18,6 +18,9 @@ public:
 private slots:
     void on_back_clicked();
 
+public:
+    void init(int);
+
 private:
     Ui::MyCourses *ui;
 };
