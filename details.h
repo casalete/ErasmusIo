@@ -23,6 +23,8 @@ private slots:
 
     void on_viewStudentsButton_clicked();
 
+    void on_search_clicked();
+
 private:
     Ui::Details *ui;
     ViewUnis *viewunis;

@@ -57,3 +57,17 @@ void Details::on_viewStudentsButton_clicked()
     modalTable->setQuery(*query_student);
     ui->tableView->setModel(modalTable);
 }
+
+void Details::on_search_clicked()
+{
+    QString studentName = ui->lineEdit_searchStudent->text();
+    QSqlDatabase db_student;
+    db_student = QSqlDatabase::database("QPSQL");
+    QSqlQueryModel* modalTable = new QSqlQueryModel();
+    QSqlQuery* query_student = new QSqlQuery(db_student);
+    query_student->prepare("SELECT * FROM student where last_name ='"+studentName+"'");
+    query_student->exec();
+    modalTable->setQuery(*query_student);
+    ui->tableView->setModel(modalTable);
+
+}
