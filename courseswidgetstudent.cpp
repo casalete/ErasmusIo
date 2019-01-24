@@ -102,3 +102,8 @@ void CoursesWidgetStudent::reset(){
 
     ui->tableView->show();
 }
+
+void CoursesWidgetStudent::on_pushButton_2_clicked()
+{
+
+}
