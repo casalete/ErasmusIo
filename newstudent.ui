@@ -322,7 +322,7 @@
     <string notr="true">background: rgb(204, 0, 0);</string>
    </property>
    <property name="text">
-    <string>CANCEL</string>
+    <string>CLOSE</string>
    </property>
   </widget>
   <widget class="QPushButton" name="submitButton">

@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+#include "coursedialog.h"
+
 namespace Ui {
 class Widget;
 }
@@ -19,12 +21,15 @@ private slots:
     void on_addCourse_clicked();
     void on_back_clicked();
 
+    void on_pushButton_clicked();
+
+public:
+    void initTableView();
+
 private:
     Ui::Widget *ui;
+    CourseDialog * coursedialog;
 
-    enum Column{
-        COURSE, TEACHER, NROFHOURS, NROFCREDITPOINTS, OPTIONALITY
-    };
 };
 
 #endif // WIDGET_H

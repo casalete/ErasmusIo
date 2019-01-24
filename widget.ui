@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1099</width>
-    <height>685</height>
+    <height>675</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,7 +29,7 @@
   <widget class="QPushButton" name="back">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>410</x>
      <y>610</y>
      <width>80</width>
      <height>31</height>
@@ -47,13 +47,13 @@
     <string notr="true">background: rgb(196, 160, 0);</string>
    </property>
    <property name="text">
-    <string>Back</string>
+    <string>BACK</string>
    </property>
   </widget>
   <widget class="QPushButton" name="addCourse">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>510</x>
      <y>610</y>
      <width>86</width>
      <height>31</height>
@@ -71,7 +71,31 @@
     <string notr="true">background: rgb(115, 210, 22);</string>
    </property>
    <property name="text">
-    <string>Add Course</string>
+    <string>ADD COURSE</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>610</y>
+     <width>80</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Courier 10 Pitch</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(114, 159, 207);</string>
+   </property>
+   <property name="text">
+    <string>RELOAD</string>
    </property>
   </widget>
  </widget>

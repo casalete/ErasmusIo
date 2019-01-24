@@ -3,6 +3,7 @@
 
 #include <QDialog>
 
+
 namespace Ui {
 class CourseDialog;
 }
@@ -25,6 +26,10 @@ private slots:
     void on_buttonBox_accepted();
 
     void on_buttonBox_rejected();
+
+    void on_save_clicked();
+
+    void on_close_clicked();
 
 private:
     Ui::CourseDialog *ui;

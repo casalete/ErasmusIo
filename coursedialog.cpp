@@ -25,48 +25,6 @@ CourseDialog::~CourseDialog()
     delete ui;
 }
 
-void CourseDialog::on_buttonBox_accepted()
-{
-
-     accept();
-//    //TODO - get values from ui
-
-//    QString form_name = ui->course->text();
-//    QString form_name_teacher = ui->teacher->text();
-//     int form_no_hours = ui->nrH->value();
-//      int form_no_credits = ui->nrCP->value();
-//    QVariant form_optionality = ui->comboBox_optionality->currentText();
-
-//    MainWindow m;
-//    m.openConnection();
-//    QSqlDatabase db = QSqlDatabase::database();
-//    QSqlQuery query(db);
-//    query.prepare("INSERT INTO course (name, name_teacher, no_credits, optionality, no_hours_w)"
-//               "VALUES (?,?,?,?,?)");
-
-//    query.addBindValue(form_name);
-//    query.addBindValue(form_name_teacher);
-//    query.addBindValue(form_no_hours);
-//    query.addBindValue(form_no_credits);
-//    query.addBindValue(form_optionality);
-
-//    query.exec();
-
-//    ui->course->clear();
-//    ui->teacher->clear();
-//    ui->nrH->clear();
-//    ui->nrCP->clear();
-//    ui->comboBox_optionality->clear();
-
-
-
-
-}
-
-void CourseDialog::on_buttonBox_rejected()
-{
-    reject();
-}
 
 QString CourseDialog::course() const{
     return ui->course->text();
@@ -87,3 +45,44 @@ int CourseDialog::nrCP() const{
 QString CourseDialog::optionality() const{
     return ui->comboBox_optionality->currentText();
 }
+
+void CourseDialog::on_save_clicked()
+{
+    //TODO - get values from ui
+
+    QString form_name = ui->course->text();
+    QString form_teacherName = ui->teacher->text();
+    int form_no_credits = ui->nrCP->value();
+    QString form_optionality = ui->comboBox_optionality->currentText();
+    int form_no_hours = ui->nrH->value();
+
+
+    QSqlDatabase db = QSqlDatabase::database();
+    QSqlQuery query(db);
+    query.prepare("INSERT INTO course (name, teacher_name, no_credits, optionality,no_hours)"
+               "VALUES (?,?,?,?,?)");
+
+    query.addBindValue(form_name);
+    query.addBindValue(form_teacherName);
+    query.addBindValue(form_no_credits);
+    query.addBindValue(form_optionality);
+    query.addBindValue(form_no_hours);
+   // query.addBindValue(role);
+
+    query.exec();
+
+    ui->course->clear();
+    ui->teacher->clear();
+    ui->nrCP->clear();
+    ui->comboBox_optionality->clear();
+    ui->nrH->clear();
+
+
+}
+
+void CourseDialog::on_close_clicked()
+{
+    hide();
+}
+
+

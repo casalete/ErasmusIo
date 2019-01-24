@@ -271,7 +271,7 @@
     <string notr="true">background: rgb(52, 101, 164);</string>
    </property>
    <property name="text">
-    <string>Details</string>
+    <string>DETAILS</string>
    </property>
   </widget>
   <widget class="QPushButton" name="coursesButton">
@@ -285,7 +285,7 @@
    </property>
    <property name="font">
     <font>
-     <family>Courier</family>
+     <family>Courier 10 Pitch</family>
      <pointsize>10</pointsize>
      <weight>75</weight>
      <bold>true</bold>
@@ -295,7 +295,7 @@
     <string notr="true">background: rgb(52, 101, 164);</string>
    </property>
    <property name="text">
-    <string>Add courses</string>
+    <string>COURSES</string>
    </property>
   </widget>
   <widget class="QPushButton" name="pushButton_save">
