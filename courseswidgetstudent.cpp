@@ -105,5 +105,13 @@ void CoursesWidgetStudent::reset(){
 
 void CoursesWidgetStudent::on_pushButton_2_clicked()
 {
+    QString courseToDelete = ui->comboBox->currentText();
 
+    QSqlDatabase db_course;
+    db_course = QSqlDatabase::database("QPSQL");
+
+    QSqlQuery query_course_to_delete;
+    query_course_to_delete.prepare("DELETE FROM public.student_course WHERE student_course.id_course=(SELECT id FROM public.course WHERE course.name ='" + courseToDelete + "')");
+    query_course_to_delete.exec();
+    reset();
 }
