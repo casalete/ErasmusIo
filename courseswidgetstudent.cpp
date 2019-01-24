@@ -11,6 +11,7 @@ CoursesWidgetStudent::CoursesWidgetStudent(QWidget *parent) :
 {
     ui->setupUi(this);
       setWindowTitle("Courses");
+}
 
 CoursesWidgetStudent::~CoursesWidgetStudent()
 {
