@@ -81,30 +81,31 @@ void MenuStudent::doQuery(int val){
            QString semester = query.value(7).toString();
            ui->lineEdit_period->setText(semester);
 
-
-
-
-
-
-
-
        }
 }
 
-//void MenuStudent::on_submitButton_clicked()
-//{
-//    QString firstname = ui->lineEdit_firstName->text();
-//    QString lastname = ui->lineEdit_firstName->text();
-//    QString email = ui->lineEdit_firstName->text();
-//    QString country = ui->lineEdit_firstName->text();
-//    QString password = ui->lineEdit_firstName->text();
-//    QString university_name = ui->lineEdit_firstName->text();
-//    QString duration = ui->lineEdit_firstName->text();
-//    QString semester = ui->lineEdit_firstName->text();
+void MenuStudent::on_submitButton_clicked()
+{
+    QString firstname = ui->lineEdit_firstName->text();
+    QString lastname = ui->lineEdit_lastName->text();
+    QString email = ui->lineEdit_email->text();
+    QString country = ui->lineEdit_country->text();
+    QString password = ui->lineEdit_password->text();
+    QString university_name = ui->lineEdit_university->text();
+    QString duration = ui->lineEdit_duration->text();
+    QString semester = ui->lineEdit_period->text();
 
-//    QSqlDatabase db_student;
-//    db_student = QSqlDatabase::database("QPSQL");
-//    QSqlQuery query_student(db_student);
-//    query_student.prepare("update student set first_name = '"+firstname+"    "")
+    QString studentIdString = QString::number(student_id);
+    QSqlDatabase db_student;
+    db_student = QSqlDatabase::database("QPSQL");
+    QSqlQuery query_student(db_student);
+    query_student.prepare("UPDATE student SET first_name='"+firstname+"',last_name='"+lastname+"',email='"+email+"',country='"+country+"',password='"+password+"',study_duration='"+duration+"',semester ='"+semester+"',university_name ='"+university_name+"' WHERE id = '"+studentIdString+"'");
+    if(query_student.exec()){
+        QMessageBox::information(this,tr("SAVE"),tr("STUDENT EDITED"));
+    }
+    else{
+        QMessageBox::critical(this,tr("error::"),tr("FAILED TO EDIT STUDENT"));
+    }
 
-//}
+
+}
