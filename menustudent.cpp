@@ -34,6 +34,12 @@ void MenuStudent::on_coursesButton_clicked()
     widget->show();
 }
 
+void MenuStudent::on_myCoursesBtn_clicked()
+{
+    mycourses = new MyCourses();
+    mycourses->show();
+}
+
 void MenuStudent::setValueFromSignal(int val){
     student_id = val;
 }

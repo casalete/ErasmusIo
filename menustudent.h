@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "courseswidgetstudent.h"
+#include "mycourses.h"
 
 namespace Ui {
 class MenuStudent;
@@ -19,10 +20,12 @@ public:
 
 private slots:
     void on_coursesButton_clicked();
+    void on_myCoursesBtn_clicked();
 
 private:
     Ui::MenuStudent *ui;
     CoursesWidgetStudent * widget;
+    MyCourses *mycourses;
 
 
 private:
