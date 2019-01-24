@@ -16,7 +16,7 @@ MenuTeacher::MenuTeacher(QWidget *parent) :
     ui(new Ui::MenuTeacher)
 {
     ui->setupUi(this);
-
+  setWindowTitle("Menu Teacher");
 
 }
 
@@ -32,6 +32,15 @@ void MenuTeacher::on_coursesButton_clicked()
     widget->show();
 
 }
+
+void MenuTeacher::on_detailsButton_clicked()
+{
+   // hide();
+    details = new Details();
+    details->show();
+
+}
+
 void MenuTeacher::doQuery(int login_id){
     teacher_id = login_id;
     QSqlDatabase db_menuteacher;

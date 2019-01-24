@@ -14,6 +14,7 @@ LoginTeacher::LoginTeacher(QWidget *parent) :
     ui(new Ui::LoginTeacher)
 {
     ui->setupUi(this);
+      setWindowTitle("Login Teacher");
 }
 
 LoginTeacher::~LoginTeacher()

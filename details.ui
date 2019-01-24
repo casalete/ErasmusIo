@@ -19,8 +19,8 @@
   <widget class="QLineEdit" name="lineEdit_searchStudent">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>70</y>
+     <x>380</x>
+     <y>30</y>
      <width>161</width>
      <height>25</height>
     </rect>
@@ -34,11 +34,11 @@
     </font>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_search">
+  <widget class="QPushButton" name="search">
    <property name="geometry">
     <rect>
-     <x>560</x>
-     <y>70</y>
+     <x>550</x>
+     <y>30</y>
      <width>80</width>
      <height>25</height>
     </rect>
@@ -61,8 +61,8 @@
   <widget class="QComboBox" name="comboBox_selectCourse">
    <property name="geometry">
     <rect>
-     <x>390</x>
-     <y>120</y>
+     <x>380</x>
+     <y>70</y>
      <width>161</width>
      <height>25</height>
     </rect>
@@ -79,8 +79,8 @@
   <widget class="QLabel" name="label_selectCourse">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>120</y>
+     <x>260</x>
+     <y>70</y>
      <width>101</width>
      <height>20</height>
     </rect>
@@ -103,8 +103,8 @@
   <widget class="QLabel" name="label_searchStudent">
    <property name="geometry">
     <rect>
-     <x>270</x>
-     <y>70</y>
+     <x>260</x>
+     <y>30</y>
      <width>111</width>
      <height>21</height>
     </rect>
@@ -131,8 +131,56 @@
      <x>50</x>
      <y>180</y>
      <width>1011</width>
-     <height>461</height>
+     <height>471</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="viewUniversities">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>120</y>
+     <width>141</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Courier 10 Pitch</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(173, 127, 168);</string>
+   </property>
+   <property name="text">
+    <string>View Universities</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="back">
+   <property name="geometry">
+    <rect>
+     <x>930</x>
+     <y>60</y>
+     <width>80</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Courier 10 Pitch</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: rgb(252, 175, 62);</string>
+   </property>
+   <property name="text">
+    <string>BACK</string>
    </property>
   </widget>
  </widget>

@@ -250,7 +250,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_details">
+  <widget class="QPushButton" name="detailsButton">
    <property name="geometry">
     <rect>
      <x>874</x>

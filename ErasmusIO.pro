@@ -42,7 +42,8 @@ SOURCES += \
     courseswidgetstudent.cpp \
     dialogcoursesstudent.cpp \
     courseinfo.cpp \
-    details.cpp
+    details.cpp \
+    viewunis.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -60,7 +61,8 @@ HEADERS += \
     courseswidgetstudent.h \
     dialogcoursesstudent.h \
     courseinfo.h \
-    details.h
+    details.h \
+    viewunis.h
 
 FORMS += \
         mainwindow.ui \
@@ -79,7 +81,8 @@ FORMS += \
     courseswidgetstudent.ui \
     dialogcoursesstudent.ui \
     courseinfo.ui \
-    details.ui
+    details.ui \
+    viewunis.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

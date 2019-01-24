@@ -13,6 +13,7 @@ NewTeacher::NewTeacher(QWidget *parent) :
     ui(new Ui::NewTeacher)
 {
     ui->setupUi(this);
+      setWindowTitle("New Teacher");
 }
 
 NewTeacher::~NewTeacher()

@@ -10,7 +10,7 @@ CoursesWidgetStudent::CoursesWidgetStudent(QWidget *parent) :
     ui(new Ui::CoursesWidgetStudent)
 {
     ui->setupUi(this);
-
+      setWindowTitle("Courses");
 
     QSqlDatabase db_courses;
     db_courses = QSqlDatabase::database("QPSQL");
@@ -20,10 +20,10 @@ CoursesWidgetStudent::CoursesWidgetStudent(QWidget *parent) :
     query_course->exec();
     modalTable->setQuery(*query_course);
     ui->tableView->setModel(modalTable);
+
     query_course->prepare("SELECT name from course");
     query_course->exec();
     ui->comboBox->setModel(modalTable);
-
 
     QSqlQueryModel* modalList = new QSqlQueryModel();
     QSqlQuery* query_student_courses = new QSqlQuery(db_courses);

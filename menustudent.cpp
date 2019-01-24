@@ -16,6 +16,7 @@ MenuStudent::MenuStudent(QWidget *parent) :
     ui(new Ui::MenuStudent)
 {
     ui->setupUi(this);
+      setWindowTitle("Menu Student");
 
 }
 

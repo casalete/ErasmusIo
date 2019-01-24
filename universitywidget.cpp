@@ -9,9 +9,9 @@ UniversityWidget::UniversityWidget(QWidget *parent) :
     ui->setupUi(this);
     QStringList labels;
     setWindowTitle("Universities");
-        ui->tableWidget->setColumnCount(4);
-        labels << "NAME" << "COUNTRY" << "CONTACT PERSON NAME"<<"CONTACT PERSON EMAIL";
-        ui->tableWidget->setHorizontalHeaderLabels(labels);
+//        ui->tableWidget->setColumnCount(4);
+//        labels << "NAME" << "COUNTRY" << "CONTACT PERSON NAME"<<"CONTACT PERSON EMAIL";
+//        ui->tableWidget->setHorizontalHeaderLabels(labels);
 }
 
 UniversityWidget::~UniversityWidget()
@@ -35,11 +35,11 @@ void UniversityWidget::on_addUniversity_clicked()
     contactName = cd.contactName();
     contactEmail = cd.contactEmail();
 
-    ui->tableWidget->insertRow(ui->tableWidget->rowCount());
-    counter = ui->tableWidget->rowCount() - 1;
-    ui->tableWidget->setItem(counter, NAME, new QTableWidgetItem(name));
-    ui->tableWidget->setItem(counter, COUNTRY, new QTableWidgetItem(country));
-    ui->tableWidget->setItem(counter, CONTACTPERSONNAME, new QTableWidgetItem(contactName));
-    ui->tableWidget->setItem(counter, CONTACTPERSONEMAIL, new QTableWidgetItem(contactEmail));
+//    ui->tableWidget->insertRow(ui->tableWidget->rowCount());
+//    counter = ui->tableWidget->rowCount() - 1;
+//    ui->tableWidget->setItem(counter, NAME, new QTableWidgetItem(name));
+//    ui->tableWidget->setItem(counter, COUNTRY, new QTableWidgetItem(country));
+//    ui->tableWidget->setItem(counter, CONTACTPERSONNAME, new QTableWidgetItem(contactName));
+//    ui->tableWidget->setItem(counter, CONTACTPERSONEMAIL, new QTableWidgetItem(contactEmail));
 
 }
