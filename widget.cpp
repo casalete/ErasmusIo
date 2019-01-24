@@ -50,6 +50,7 @@ void Widget::on_addCourse_clicked()
 
 
 
+
     QSqlDatabase db_course;
     db_course = QSqlDatabase::database("QPSQL");
     QSqlQuery query_teacher_id(db_course);
@@ -77,6 +78,9 @@ void Widget::on_addCourse_clicked()
      query_add_course.addBindValue(teacherID);
 
      query_add_course.exec();
+
+
+
 
 }
 
