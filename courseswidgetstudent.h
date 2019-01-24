@@ -28,6 +28,7 @@ private:
 
 public:
   void init(int);
+  void reset();
 };
 
 #endif // COURSESWIDGETSTUDENT_H
