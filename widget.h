@@ -23,9 +23,6 @@ private slots:
 
     void on_pushButton_clicked();
 
-public:
-    void initTableView();
-
 private:
     Ui::Widget *ui;
     CourseDialog * coursedialog;
