@@ -103,7 +103,7 @@
     <string notr="true">background:transparent;</string>
    </property>
    <property name="text">
-    <string>Selected courses:</string>
+    <string>My Courses:</string>
    </property>
   </widget>
   <widget class="QListView" name="listView">
@@ -143,8 +143,8 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>100</y>
+     <x>920</x>
+     <y>60</y>
      <width>141</width>
      <height>23</height>
     </rect>
@@ -168,7 +168,7 @@
    <property name="geometry">
     <rect>
      <x>920</x>
-     <y>500</y>
+     <y>110</y>
      <width>131</width>
      <height>31</height>
     </rect>
