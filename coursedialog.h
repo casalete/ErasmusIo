@@ -23,12 +23,7 @@ public:
     QString optionality() const;
 
 private slots:
-    void on_buttonBox_accepted();
-
-    void on_buttonBox_rejected();
-
     void on_save_clicked();
-
     void on_close_clicked();
 
 private:

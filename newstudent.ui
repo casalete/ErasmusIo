@@ -229,7 +229,7 @@
     <number>1</number>
    </property>
    <property name="maximum">
-    <number>30</number>
+    <number>50</number>
    </property>
   </widget>
   <widget class="QLabel" name="label_9">
