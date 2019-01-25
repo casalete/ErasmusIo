@@ -60,11 +60,11 @@ void NewStudent::on_submitButton_clicked()
 
 
      if(query.exec()){
-         QMessageBox::information(this,tr("SUCCESS"),tr("TEACHER ADDED SUCCESFULLY"));
+         QMessageBox::information(this,tr("SUCCESS"),tr("STUDENT ADDED SUCCESFULLY"));
           hide();
      }
      else{
-         QMessageBox::critical(this,tr("error::"),tr("FAILED TO ADD TEACHER"));
+         QMessageBox::critical(this,tr("error::"),tr("FAILED TO ADD STUDENT"));
      }
 
     ui->lineEdit_firstName->clear();

@@ -31,7 +31,7 @@
     <rect>
      <x>130</x>
      <y>40</y>
-     <width>111</width>
+     <width>171</width>
      <height>41</height>
     </rect>
    </property>
@@ -47,7 +47,7 @@
     <string notr="true">background:transparent;</string>
    </property>
    <property name="text">
-    <string>MY COURSES</string>
+    <string>STUDENT COURSES</string>
    </property>
   </widget>
   <widget class="QPushButton" name="back">
@@ -72,6 +72,48 @@
    </property>
    <property name="text">
     <string>BACK</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>100</y>
+     <width>144</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Courier</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Number of courses:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="nrCoursesLabel">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>100</y>
+     <width>51</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Courier</family>
+     <pointsize>10</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

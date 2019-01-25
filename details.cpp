@@ -53,7 +53,8 @@ void Details::on_viewStudentsButton_clicked()
     db_student = QSqlDatabase::database("QPSQL");
     QSqlQueryModel* modalTable = new QSqlQueryModel();
     QSqlQuery* query_student = new QSqlQuery(db_student);
-    query_student->prepare("SELECT * FROM public.student WHERE id IN(SELECT id_student FROM public.student_course WHERE id_course = (SELECT id FROM public.course WHERE public.course.name ='" + courseNameString+ "'))");
+    query_student->prepare("SELECT email, first_name, last_name, country, study_duration, semester, university_name"
+                           " FROM public.student WHERE id IN(SELECT id_student FROM public.student_course WHERE id_course = (SELECT id FROM public.course WHERE public.course.name ='" + courseNameString+ "'))");
     query_student->exec();
     while(query_student->next()){
         k++;
@@ -72,9 +73,29 @@ void Details::on_search_clicked()
     db_student = QSqlDatabase::database("QPSQL");
     QSqlQueryModel* modalTable = new QSqlQueryModel();
     QSqlQuery* query_student = new QSqlQuery(db_student);
-    query_student->prepare("SELECT * FROM student where last_name ='"+studentName+"'");
+    query_student->prepare("SELECT email, first_name, last_name,  country, study_duration, semester, university_name FROM student where last_name ='"+studentName+"'");
     query_student->exec();
     modalTable->setQuery(*query_student);
     ui->tableView->setModel(modalTable);
 
+}
+
+void Details::on_tableView_activated(const QModelIndex &index)
+{
+    QString val = ui->tableView->model()->data(index).toString();
+    ui->selectedStudentLabel->setText(val);
+    QSqlDatabase db_table = QSqlDatabase::database("QPSQL");
+    QSqlQuery query_table = QSqlQuery(db_table);
+    query_table.prepare("SELECT id from student where email = '"+val+"'");
+    query_table.exec();
+    while(query_table.next()){
+        selectedStudent = query_table.value(0).toInt();
+    }
+}
+
+void Details::on_pushButton_clicked()
+{
+    mycourses = new MyCourses();
+    mycourses->init(selectedStudent);
+    mycourses->show();
 }

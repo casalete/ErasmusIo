@@ -33,7 +33,7 @@ Widget::~Widget()
 
 void Widget::on_addCourse_clicked()
 {
-    int res, nrHours, counter, nrCreditPoints;
+    int res, nrHours,nrCreditPoints;
     QString courseName, teacherName, optionality;
 
     CourseDialog cd(this);
