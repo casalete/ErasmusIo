@@ -59,7 +59,13 @@ void NewStudent::on_submitButton_clicked()
    // query.addBindValue(role);
 
 
-    query.exec();
+     if(query.exec()){
+         QMessageBox::information(this,tr("SUCCESS"),tr("TEACHER ADDED SUCCESFULLY"));
+          hide();
+     }
+     else{
+         QMessageBox::critical(this,tr("error::"),tr("FAILED TO ADD TEACHER"));
+     }
 
     ui->lineEdit_firstName->clear();
     ui->lineEdit_lastName->clear();
@@ -69,6 +75,7 @@ void NewStudent::on_submitButton_clicked()
     ui->lineEdit_university->clear();
     ui->comboBox_semester->clear();
     ui->spinBox_duration->clear();
+
 
 
 

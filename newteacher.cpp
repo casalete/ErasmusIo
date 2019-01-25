@@ -61,19 +61,21 @@ void NewTeacher::on_submitButton_clicked()
 
 
 
+    if(query.exec()){
+        QMessageBox::information(this,tr("SUCCESS"),tr("TEACHER ADDED SUCCESFULLY"));
+         hide();
+    }
+    else{
+        QMessageBox::critical(this,tr("error::"),tr("FAILED TO ADD TEACHER"));
+    }
+
+    ui->lineEdit_firstName->clear();
+    ui->lineEdit_lastName->clear();
+    ui->lineEdit_email->clear();
+    ui->lineEdit_password->clear();
+    ui->lineEdit_courseName->clear();
 
 
-
-    query.exec();
-
-//    ui->lineEdit_firstName->clear();
-//    ui->lineEdit_lastName->clear();
-//    ui->lineEdit_email->clear();
-//    ui->lineEdit_password->clear();
-//    ui->lineEdit_country->clear();
-//    ui->lineEdit_university->clear();
-//    ui->comboBox_semester->clear();
-//    ui->spinBox_duration->clear();
 }
 
 
